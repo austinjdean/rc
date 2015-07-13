@@ -27,6 +27,9 @@ alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias gitgudskrub='echo u fokin wot m8'
 alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
+alias tux='ssh ajd336@tux.cs.drexel.edu'
+alias hh='hashcat --help | less'
+alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
 
 # phonegap aliases
 
