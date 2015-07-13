@@ -1,7 +1,7 @@
 <project>
 
 	<!-- Variables to use throughout build file -->
-	<property name="dest-dir" value="~/"/>
+	<property name="dest-dir" value="/home/adean"/>
 	<property name="executable" value=".zshrc"/>
 	<property name="script-name" value="zshrc"/>
 
