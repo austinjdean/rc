@@ -48,7 +48,7 @@ calc() {
 export ANDROID_HOME=/usr/local/android-sdk-linux
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-export JAVA_HOME=/usr/local/jdk1.8.0_40
+export JAVA_HOME=/usr/local/jdk1.8.0_45
 export PATH=${PATH}:$JAVA_HOME/bin
 
 export PHONEGAP_HOME=/home/adean/node_modules/phonegap
