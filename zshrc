@@ -30,6 +30,7 @@ alias gitgudskrub='echo u fokin wot m8'
 alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
 alias tux='ssh ajd336@tux.cs.drexel.edu'
+alias ti='tilda&'
 
 # Sometimes useful
 
