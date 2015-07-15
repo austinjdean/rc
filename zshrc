@@ -4,7 +4,15 @@
 
 xset r rate 250 40
 
+# Functions
+
+calc() {
+    echo "$(($@))"
+}
+
 # Aliases
+
+# Always useful
 
 alias refresh='source ~/.zshrc'
 alias cr='google-chrome'
@@ -14,20 +22,25 @@ alias ..='cd ..'
 alias ~='cd ~'
 alias la='ls -a'
 alias ll='ls -l'
-alias sus='sudo gnome-screensaver-command -l && sudo pm-suspend'
-alias lock='gnome-screensaver-command -l'
 alias editrc='subl ~/.zshrc'
 alias ngrep='grep -n'
 alias ingrep='grep -in'
-alias mhealth='ssh ubuntu@129.25.12.156'
-alias rein='adb install -r /home/adean/choptrack/choptrack-client/platforms/android/ant-build/CordovaApp-debug.apk'
 alias gist='git status'
-alias lc='adb -d logcat | grep -v E/MP-Decision'
-alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias gitgudskrub='echo u fokin wot m8'
+alias uwotm8='echo u avin a ggl ther m8 ill bash ye fookin ead in I sware on me mum'
 alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
 alias tux='ssh ajd336@tux.cs.drexel.edu'
+alias ti='tilda&'
+
+# Sometimes useful
+
+alias sus='sudo gnome-screensaver-command -l && sudo pm-suspend'
+alias lock='gnome-screensaver-command -l'
+alias mhealth='ssh ubuntu@129.25.12.156'
+alias rein='adb install -r /home/adean/choptrack/choptrack-client/platforms/android/ant-build/CordovaApp-debug.apk'
+alias lc='adb -d logcat | grep -v E/MP-Decision'
+alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
 alias sil='ssh adean@144.118.173.119'
@@ -36,12 +49,6 @@ alias sil='ssh adean@144.118.173.119'
 
 alias bd='phonegap build android --verbose'
 alias rn='phonegap run android --verbose'
-
-# Functions
-
-calc() {
-    echo "$(($@))"
-}
 
 # Path stuff
 
