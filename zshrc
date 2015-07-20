@@ -43,8 +43,9 @@ alias lc='adb -d logcat | grep -v E/MP-Decision'
 alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
-alias sil='ssh adean@144.118.173.119'
+# alias sil='ssh adean@144.118.173.119'
 alias work='ssh adean@144.118.172.123'
+alias sil='ssh adean@144.118.172.120'
 
 # phonegap aliases
 
@@ -2510,8 +2511,8 @@ fi
 if [[ "$TERM" != dumb ]]; then
     #a1# List files with colors (\kbd{ls -F \ldots})
     alias ls='command ls -F '${ls_options:+"${ls_options[*]}"}
-    #a1# List all files, with colors (\kbd{ls -la \ldots})
-    alias la='command ls -la '${ls_options:+"${ls_options[*]}"}
+    #a1# List all files, with colors (\kbd{ls -a \ldots})
+    alias la='command ls -a '${ls_options:+"${ls_options[*]}"}
     #a1# List files with long colored list, without dotfiles (\kbd{ls -l \ldots})
     alias ll='command ls -l '${ls_options:+"${ls_options[*]}"}
     #a1# List files with long colored list, human readable sizes (\kbd{ls -hAl \ldots})
@@ -2520,7 +2521,7 @@ if [[ "$TERM" != dumb ]]; then
     alias l='command ls -lF '${ls_options:+"${ls_options[*]}"}
 else
     alias ls='command ls -F'
-    alias la='command ls -la'
+    alias la='command ls -a'
     alias ll='command ls -l'
     alias lh='command ls -hAl'
     alias l='command ls -lF'
