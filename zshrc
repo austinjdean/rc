@@ -44,6 +44,7 @@ alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
 alias sil='ssh adean@144.118.173.119'
+alias work='ssh adean@144.118.172.123'
 
 # phonegap aliases
 
