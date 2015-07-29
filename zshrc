@@ -10,6 +10,10 @@ calc() {
     echo "$(($@))"
 }
 
+rand() {
+    echo "$(((RANDOM % $1) + 1))"
+}
+
 # Aliases
 
 # Always useful
