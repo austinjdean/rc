@@ -36,6 +36,7 @@ alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
 alias tux='ssh ajd336@tux.cs.drexel.edu'
 alias ti='tilda&'
+alias op='xdg-open'
 
 # Sometimes useful
 
