@@ -37,6 +37,7 @@ alias lp='dpkg --get-selections | grep -v deinstall | less'
 alias tux='ssh ajd336@tux.cs.drexel.edu'
 alias ti='tilda&'
 alias op='xdg-open'
+alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time"'
 
 # Sometimes useful
 
