@@ -4,6 +4,7 @@
 
 xset r rate 250 40 > /dev/null 2>&1
 # thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
+# also FYI, terminal color: #060041
 
 # Functions
 
