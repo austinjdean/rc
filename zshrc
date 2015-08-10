@@ -3,6 +3,7 @@
 # Commands to run
 
 xset r rate 250 40 > /dev/null 2>&1
+# thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
 
 # Functions
 
