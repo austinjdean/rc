@@ -2,7 +2,7 @@
 
 # Commands to run
 
-xset r rate 250 40 > /dev/null
+xset r rate 250 40 > /dev/null 2>&1
 
 # Functions
 
