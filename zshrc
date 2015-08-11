@@ -53,6 +53,8 @@ alias hh='hashcat --help | less'
 alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
 alias work='ssh -XY adean@144.118.172.123'
 alias sil='ssh -XY adean@144.118.172.120'
+alias vl='virsh list'
+alias vla='virsh list --all'
 
 # phonegap aliases
 
