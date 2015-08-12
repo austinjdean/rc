@@ -2,7 +2,9 @@
 
 # Commands to run
 
-xset r rate 250 40 > /dev/null
+xset r rate 250 40 > /dev/null 2>&1
+# thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
+# also FYI, terminal color: #060041
 
 # Functions
 
@@ -34,9 +36,10 @@ alias gitgudskrub='echo u fokin wot m8'
 alias uwotm8='echo u avin a ggl ther m8 ill bash ye fookin ead in I sware on me mum'
 alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
-alias tux='ssh ajd336@tux.cs.drexel.edu'
+alias tux='ssh -XY ajd336@tux.cs.drexel.edu'
 alias ti='tilda&'
 alias op='xdg-open'
+alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time"'
 
 # Sometimes useful
 
@@ -48,9 +51,10 @@ alias lc='adb -d logcat | grep -v E/MP-Decision'
 alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
-# alias sil='ssh adean@144.118.173.119'
-alias work='ssh adean@144.118.172.123'
-alias sil='ssh adean@144.118.172.120'
+alias work='ssh -XY adean@144.118.172.123'
+alias sil='ssh -XY adean@144.118.172.120'
+alias vl='virsh list'
+alias vla='virsh list --all'
 
 # phonegap aliases
 
