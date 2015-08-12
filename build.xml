@@ -1,7 +1,8 @@
 <project>
 
 	<!-- Variables to use throughout build file -->
-	<property name="dest-dir" value="/home/adean"/>
+	<property name="home-dir" value="/home/adean"/>
+	<property name="usr-local-bin" value="/usr/local/bin"/>
 
 	<property name="zsh-executable" value=".zshrc"/>
 	<property name="zsh-script-name" value="zshrc"/>
@@ -9,17 +10,27 @@
 	<property name="vim-executable" value=".vimrc"/>
 	<property name="vim-script-name" value="vimrc"/>
 
+	<property name="update-executable" value="repo-update"/>
+	<property name="update-script-name" value="update.sh"/>
+
+	<property name="status-executable" value="repo-status"/>
+	<property name="status-script-name" value="status.sh"/>
+
 	<!-- Use a symbolic link instead of copying. That way there is no need
 	to update if the script is edited -->
 
 	<target name="install">
-		<symlink link="${dest-dir}/${zsh-executable}" resource="${user.dir}/${zsh-script-name}"/>
-		<symlink link="${dest-dir}/${vim-executable}" resource="${user.dir}/${vim-script-name}"/>
+		<symlink link="${home-dir}/${zsh-executable}" resource="${user.dir}/${zsh-script-name}"/>
+		<symlink link="${home-dir}/${vim-executable}" resource="${user.dir}/${vim-script-name}"/>
+		<symlink link="${usr-local-bin}/${update-executable}" resource="${user.dir}/${update-script-name}"/>
+		<symlink link="${usr-local-bin}/${status-executable}" resource="${user.dir}/${status-script-name}"/>
 	</target>
 
 	<target name="clean">
-		<delete file="${dest-dir}/${zsh-executable}"/>
-		<delete file="${dest-dir}/${vim-executable}"/>
+		<delete file="${home-dir}/${zsh-executable}"/>
+		<delete file="${home-dir}/${vim-executable}"/>
+		<delete file="${usr-local-bin}/${update-executable}"/>
+		<delete file="${usr-local-bin}/${status-executable}"/>
 	</target>
 
 </project>
