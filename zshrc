@@ -64,6 +64,8 @@ alias rn='phonegap run android --verbose'
 
 # Path stuff
 
+export PATH=${PATH}:$HOME/bin
+
 export ANDROID_HOME=/usr/local/android-sdk-linux
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
