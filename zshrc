@@ -18,6 +18,9 @@ rand() {
 	echo "$(((RANDOM % $1) + 1))"
 }
 
+declare -i ID
+ID=`xinput list | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
+
 # Aliases
 
 # Always useful
@@ -43,6 +46,8 @@ alias ti='tilda&'
 alias op='xdg-open'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time"'
 alias fp='readlink -f'
+alias toff='xinput set-prop $ID "Device Enabled" 0'
+alias ton='xinput set-prop $ID "Device Enabled" 1'
 
 # Sometimes useful
 
