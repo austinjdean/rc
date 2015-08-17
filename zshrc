@@ -19,7 +19,7 @@ rand() {
 }
 
 declare -i ID
-ID=`xinput list | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
+ID=`xinput list 2>/dev/null | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
 
 # Aliases
 
