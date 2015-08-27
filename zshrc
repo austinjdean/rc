@@ -49,6 +49,8 @@ alias o='xdg-open'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time"'
 alias fp='readlink -f'
 alias t='tree -L '
+alias scw='sudo arp-scan --interface=wlan0 --localnet'
+alias sce='sudo arp-scan --interface=eth0 --localnet'
 
 # Sometimes useful
 
