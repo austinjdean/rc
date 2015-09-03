@@ -69,6 +69,7 @@ alias sil='ssh -XY adean@144.118.172.120'
 alias vl='virsh list'
 alias vla='virsh list --all'
 alias vm='virt-manager'
+alias vc='sudo virt-clone'
 
 # phonegap aliases
 
