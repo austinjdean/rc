@@ -52,7 +52,7 @@ alias t='tree -L '
 alias scw='sudo arp-scan --interface=wlan0 --localnet'
 alias sce='sudo arp-scan --interface=eth0 --localnet'
 alias mkdt='mkdir $(date '+%m-%d-%y_%H.%M')'
-alias n.='nautilus .'
+alias n.='nautilus . > /dev/null 2>&1'
 
 # Sometimes useful
 
