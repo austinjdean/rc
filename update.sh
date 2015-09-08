@@ -15,7 +15,7 @@ do
 		git checkout $branch
 		git pull
 	done
-	git checkout $originalBranch
+	git checkout $originalBranch > /dev/null 2>&1
 	cd ..
 	echo
 done
