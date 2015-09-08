@@ -17,4 +17,5 @@ do
 	done
 	git checkout $originalBranch
 	cd ..
+	echo
 done
