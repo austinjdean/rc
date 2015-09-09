@@ -18,4 +18,6 @@ do
 	git checkout $originalBranch > /dev/null 2>&1
 	cd ..
 	echo
+	echo -----------------------------------------------
+	echo
 done

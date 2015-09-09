@@ -10,10 +10,10 @@
 	<property name="vim-executable" value=".vimrc"/>
 	<property name="vim-script-name" value="vimrc"/>
 
-	<property name="update-executable" value="repo-update"/>
+	<property name="update-executable" value="ru"/>
 	<property name="update-script-name" value="update.sh"/>
 
-	<property name="status-executable" value="repo-status"/>
+	<property name="status-executable" value="rs"/>
 	<property name="status-script-name" value="status.sh"/>
 
 	<!-- Use a symbolic link instead of copying. That way there is no need
