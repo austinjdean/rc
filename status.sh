@@ -12,7 +12,7 @@ do
 	branchArr=( $branches )
 	for branch in "${branchArr[@]}"
 	do
-		git checkout $branch
+		git checkout $branch > /dev/null 2>&1
 		git fetch
 		git status
 	done
