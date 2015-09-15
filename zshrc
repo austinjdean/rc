@@ -55,6 +55,7 @@ alias mkdt='mkdir $(date '+%m-%d-%y_%H.%M')'
 alias n.='nautilus . > /dev/null 2>&1'
 alias height='tput lines'
 alias width='tput cols'
+alias lu='ps aux | egrep "sshd: [a-zA-Z]+@"'
 
 # Sometimes useful
 
