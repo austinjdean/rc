@@ -44,6 +44,7 @@ alias uwotm8='echo u avin a ggl ther m8 ill bash ye fookin ead in I sware on me 
 alias glga='git log --graph --all'
 alias lp='dpkg --get-selections | grep -v deinstall | less'
 alias tux='ssh -XY ajd336@tux.cs.drexel.edu'
+alias ent='ssh -XY adean@192.168.69.121'
 alias ti='tilda&'
 alias o='xdg-open'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time"'
