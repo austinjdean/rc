@@ -14,10 +14,10 @@
 	<property name="til-executable" value="config_0"/>
 	<property name="til-script-name" value="config_0"/>
 
-	<property name="update-executable" value="repo-update"/>
+	<property name="update-executable" value="ru"/>
 	<property name="update-script-name" value="update.sh"/>
 
-	<property name="status-executable" value="repo-status"/>
+	<property name="status-executable" value="rs"/>
 	<property name="status-script-name" value="status.sh"/>
 
 	<!-- Use a symbolic link instead of copying. That way there is no need
