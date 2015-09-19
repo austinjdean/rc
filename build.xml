@@ -3,7 +3,7 @@
 	<!-- Variables to use throughout build file -->
 	<property name="home-dir" value="/home/adean"/>
 	<property name="usr-local-bin" value="/usr/local/bin"/>
-	<property name="tilda-config" value="/home/adean/.config/tilda"/>
+	<!-- <property name="tilda-config" value="/home/adean/.config/tilda"/> -->
 
 	<property name="zsh-executable" value=".zshrc"/>
 	<property name="zsh-script-name" value="zshrc"/>
@@ -11,8 +11,8 @@
 	<property name="vim-executable" value=".vimrc"/>
 	<property name="vim-script-name" value="vimrc"/>
 
-	<property name="til-executable" value="config_0"/>
-	<property name="til-script-name" value="config_0"/>
+	<!-- <property name="til-executable" value="config_0"/> -->
+	<!-- <property name="til-script-name" value="config_0"/> -->
 
 	<property name="update-executable" value="ru"/>
 	<property name="update-script-name" value="update.sh"/>
@@ -28,7 +28,7 @@
 		<symlink link="${home-dir}/${vim-executable}" resource="${user.dir}/${vim-script-name}"/>
 		<symlink link="${usr-local-bin}/${update-executable}" resource="${user.dir}/${update-script-name}"/>
 		<symlink link="${usr-local-bin}/${status-executable}" resource="${user.dir}/${status-script-name}"/>
-		<symlink link="${tilda-config}/${til-executable}" resource="${user.dir}/${til-script-name}"/>
+		<!-- <symlink link="${tilda-config}/${til-executable}" resource="${user.dir}/${til-script-name}"/> -->
 	</target>
 
 	<target name="clean">
@@ -36,7 +36,7 @@
 		<delete file="${home-dir}/${vim-executable}"/>
 		<delete file="${usr-local-bin}/${update-executable}"/>
 		<delete file="${usr-local-bin}/${status-executable}"/>
-		<delete file="${tilda-config}/${til-executable}"/>
+		<!-- <delete file="${tilda-config}/${til-executable}"/> -->
 	</target>
 
 </project>
