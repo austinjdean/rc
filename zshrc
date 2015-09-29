@@ -75,6 +75,7 @@ alias vl='virsh list'
 alias vla='virsh list --all'
 alias vm='virt-manager'
 alias vc='sudo virt-clone'
+alias ct='cd ~/Dropbox/Drexel/Term1'
 
 # phonegap aliases
 
