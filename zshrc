@@ -58,6 +58,7 @@ alias n.='nautilus . > /dev/null 2>&1'
 alias height='tput lines'
 alias width='tput cols'
 alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
+alias l='less'
 
 # Sometimes useful
 
@@ -2550,13 +2551,13 @@ if [[ "$TERM" != dumb ]]; then
 	#a1# List files with long colored list, human readable sizes (\kbd{ls -hAl \ldots})
 	alias lh='command ls -hAl '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, append qualifier to filenames (\kbd{ls -lF \ldots})\\&\quad(\kbd{/} for directories, \kbd{@} for symlinks ...)
-	alias l='command ls -lF '${ls_options:+"${ls_options[*]}"}
+	# alias l='command ls -lF '${ls_options:+"${ls_options[*]}"}
 else
 	alias ls='command ls -F'
 	alias la='command ls -a'
 	alias ll='command ls -l'
 	alias lh='command ls -hAl'
-	alias l='command ls -lF'
+	# alias l='command ls -lF'
 fi
 
 alias mdstat='cat /proc/mdstat'
