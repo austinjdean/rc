@@ -60,6 +60,7 @@ alias width='tput cols'
 alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
 alias l='less'
 alias fuck='sudo $(fc -ln -1)' # thanks: http://unix.stackexchange.com/a/158480/110877
+alias rrd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1'2 # thanks: http://stackoverflow.com/a/1015684/2929868
 
 # Sometimes useful
 
