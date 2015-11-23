@@ -59,7 +59,7 @@ alias height='tput lines'
 alias width='tput cols'
 alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
 alias l='less'
-alias fuck='sudo !!'
+alias fuck='sudo $(fc -ln -1)'
 
 # Sometimes useful
 
