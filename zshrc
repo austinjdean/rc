@@ -53,7 +53,7 @@ alias fp='readlink -f'
 alias t='tree -L '
 alias scw='sudo arp-scan --interface=wlan0 --localnet'
 alias sce='sudo arp-scan --interface=eth0 --localnet'
-alias mkdt='mkdir $(date '+%m-%d-%y_%H.%M')'
+alias mkdt='mkdir $(date "+%m-%d-%y_%H.%M")'
 alias n.='nautilus . > /dev/null 2>&1'
 alias height='tput lines'
 alias width='tput cols'
@@ -61,6 +61,7 @@ alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
 alias l='less'
 alias fuck='sudo $(fc -ln -1)' # thanks: http://unix.stackexchange.com/a/158480/110877
 alias rd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1' # thanks: http://stackoverflow.com/a/1015684/2929868
+alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
 
 # Sometimes useful
 
