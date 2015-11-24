@@ -65,39 +65,24 @@ alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
 
 # Sometimes useful
 
-alias sus='sudo gnome-screensaver-command -l && sudo pm-suspend'
-alias lock='gnome-screensaver-command -l'
-alias mhealth='ssh ubuntu@129.25.12.156'
-alias rein='adb install -r /home/adean/choptrack/choptrack-client/platforms/android/ant-build/CordovaApp-debug.apk'
-alias lc='adb -d logcat | grep -v E/MP-Decision'
 alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
-alias hashdef='hashcat -m 1800 -a 0 -o ~/pw/cracked.txt ~/pw/shadow ~/wordlists/rockyou.txt'
 alias work='ssh -XY adean@144.118.172.123'
 alias sil='ssh -XY adean@144.118.172.120'
-alias vl='virsh list'
-alias vla='virsh list --all'
-alias vm='virt-manager'
-alias vc='sudo virt-clone'
 alias ct='cd ~/Dropbox/Drexel/Term1'
-
-# phonegap aliases
-
-alias bd='phonegap build android --verbose'
-alias rn='phonegap run android --verbose'
 
 # Path stuff
 
 export PATH=${PATH}:$HOME/bin
 
-export ANDROID_HOME=/usr/local/android-sdk-linux
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=/usr/local/android-sdk-linux
+# export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 export JAVA_HOME=/usr/local/jdk1.8.0_45
 export PATH=${PATH}:$JAVA_HOME/bin
 
-export PHONEGAP_HOME=/home/adean/node_modules/phonegap
-export PATH=${PATH}:$PHONEGAP_HOME/bin
+# export PHONEGAP_HOME=/home/adean/node_modules/phonegap
+# export PATH=${PATH}:$PHONEGAP_HOME/bin
 
 # export ANDROID_STUDIO=/usr/local/android-studio
 # export PATH=${PATH}:$ANDROID_STUDIO/bin
