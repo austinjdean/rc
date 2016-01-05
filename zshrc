@@ -2,7 +2,7 @@
 
 # Commands to run
 
-xset r rate 250 40 > /dev/null 2>&1
+xset r rate 220 40 > /dev/null 2>&1
 # thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
 # also FYI, terminal color: #060041
 
@@ -62,6 +62,30 @@ alias l='less'
 alias fuck='sudo $(fc -ln -1)' # thanks: http://unix.stackexchange.com/a/158480/110877
 alias rd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1' # thanks: http://stackoverflow.com/a/1015684/2929868
 alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
+alias n='nautilus'
+alias ld='cd ~/Downloads && readlink -f $(ls -rt | tail -n 1) && cd - > /dev/null 2>&1'
+
+# Attempting to move the most recently downloaded file to the current directory...
+
+# alias test='mv ~/Downloads/$(readlink -f $(ls -rt | tail -n 1)) .'
+# alias test='echo $(readlink -f $(ls -rt | tail -n 1))'
+# alias test='cd ~/Downloads && for f in *\ *; do mv "$f" "${f// /-}"; done && echo $(readlink -f $(ls -rt | tail -n 1))'
+# alias test='echo $(cd -)'
+# alias test='cd ~/Downloads && for f in *\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1 && mv $(ls -t | head -n 1) $(echo $(cd -))'
+
+# alias resp='cd ~/Downloads && for f in *\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1 && cd - > /dev/null 2>&1'
+# alias test="readlink -f $(find ~/Downloads -type f | xargs ls -ltr | tail -n 1 | grep -o '[^ ]*$')"
+# alias movehere="mv $(find /home/adean/Downloads/ -type f | xargs ls -ltr | tail -n 1 | grep -o '[^ ]*$') ."
+
+# Need a sanitize alias to remove spaces from downloaded file names and a move alias to move the file to the current dir.
+
+alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
+
+alias pants="find ~/Downloads/ -type f | xargs ls -ltr | tail -n 1 | grep -o '[^ ]*$'"
+
+alias movehere='$(sanitize) & mv $(pants) .'
+
+# end attempt section
 
 # Sometimes useful
 
@@ -69,7 +93,7 @@ alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias work='ssh -XY adean@144.118.172.123'
 alias sil='ssh -XY adean@144.118.172.120'
-alias ct='cd ~/Dropbox/Drexel/Term1'
+alias ct='cd ~/Dropbox/Drexel/Term2'
 
 # Path stuff
 
