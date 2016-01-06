@@ -65,6 +65,7 @@ alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
 alias n='nautilus'
 alias ld='cd ~/Downloads && readlink -f $(ls -rt | tail -n 1) && cd - > /dev/null 2>&1'
 alias cs='xdg-open https://www.cs.drexel.edu/~ck47/2015-2016/cs283-wi1516/syllabus.html > /dev/null 2>&1'
+alias topdf='unoconv -f pdf *.ppt* && rm *.ppt*'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
