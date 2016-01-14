@@ -69,6 +69,7 @@ alias topdf='unoconv -f pdf *.ppt* && rm *.ppt*'
 alias c='xclip -selection clipboard'
 alias v='xclip -selection clipboard -o'
 alias ct='cd ~/Dropbox/Drexel/Term2'
+alias round='xargs printf "%.*f\n" $p '
 
 # Attempting to move the most recently downloaded file to the current directory...
 
