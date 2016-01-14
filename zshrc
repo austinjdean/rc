@@ -68,8 +68,7 @@ alias cs='cd ~/Dropbox/Drexel/Term2/CS283/'
 alias topdf='unoconv -f pdf *.ppt* && rm *.ppt*'
 alias c='xclip -selection clipboard'
 alias v='xclip -selection clipboard -o'
-alias scl='svn co file://`echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/project-repo' # requires additional arg - name of clone
-alias scr='svn co svn+ssh://ajd336@tux.cs.drexel.edu:/home/ajd336/courses/cs283/svn/project-repo `echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/projects'
+alias ct='cd ~/Dropbox/Drexel/Term2'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
@@ -99,7 +98,8 @@ alias fixcr='cd ~/.config/google-chrome/Default && rm -rf Web\ Data && cd -'
 alias hh='hashcat --help | less'
 alias work='ssh -XY adean@144.118.172.123'
 alias sil='ssh -XY adean@144.118.172.120'
-alias ct='cd ~/Dropbox/Drexel/Term2'
+alias scl='svn co file://`echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/project-repo' # requires additional arg - name of clone
+alias scr='svn co svn+ssh://ajd336@tux.cs.drexel.edu:/home/ajd336/courses/cs283/svn/project-repo `echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/projects'
 
 # Path stuff
 
