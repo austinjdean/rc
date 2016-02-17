@@ -70,6 +70,8 @@ alias c='xclip -selection clipboard'
 alias v='xclip -selection clipboard -o'
 alias ct='cd ~/Dropbox/Drexel/Term2'
 alias round='xargs printf "%.*f\n" $p '
+alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
+alias gfr='xdg-open "https://mail.google.com/mail/u/0/#inbox" > /dev/null 2>&1 && xdg-open "https://www.facebook.com/" > /dev/null 2>&1 && xdg-open "https://www.reddit.com/" > /dev/null 2>&1'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
