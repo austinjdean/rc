@@ -51,7 +51,7 @@ alias ti='tilda&'
 alias o='xdg-open'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time" | cat'
 alias fp='readlink -f'
-alias t='tree -L '
+alias t='tree -LC '
 alias scw='sudo arp-scan --interface=wlan0 --localnet'
 alias sce='sudo arp-scan --interface=eth0 --localnet'
 alias mkdt='mkdir $(date "+%m-%d-%y_%H.%M")'
@@ -74,6 +74,7 @@ alias round='xargs printf "%.*f\n" $p '
 alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
 alias gfr='xdg-open "https://mail.google.com/mail/u/0/#inbox" > /dev/null 2>&1 && xdg-open "https://www.facebook.com/" > /dev/null 2>&1 && xdg-open "https://www.reddit.com/" > /dev/null 2>&1'
 alias rn='sudo service network-manager restart'
+alias less='less -R'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
