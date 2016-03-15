@@ -75,6 +75,7 @@ alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
 alias gfr='xdg-open "https://mail.google.com/mail/u/0/#inbox" > /dev/null 2>&1 && xdg-open "https://www.facebook.com/" > /dev/null 2>&1 && xdg-open "https://www.reddit.com/" > /dev/null 2>&1'
 alias rn='sudo service network-manager restart'
 alias less='less -R'
+alias gpa='gpa --disable-x509'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
@@ -92,7 +93,7 @@ alias less='less -R'
 
 alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
 
-alias pants="find ~/Downloads/ -type f | xargs ls -ltr | tail -n 1 | grep -o '[^ ]*$'"
+alias pants="find ~/Downloads/ -type f | xargs ls -ltr > /dev/null 2>&1 | tail -n 1 | grep -o '[^ ]*$'"
 
 alias movehere='$(sanitize) & mv $(pants) .'
 
