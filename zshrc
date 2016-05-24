@@ -55,7 +55,8 @@ alias t='tree -LC '
 alias scw='sudo arp-scan --interface=wlan0 --localnet'
 alias sce='sudo arp-scan --interface=eth0 --localnet'
 alias mkdt='mkdir $(date "+%m-%d-%y_%H.%M")'
-alias n.='nautilus . > /dev/null 2>&1'
+alias n.='nautilus --no-desktop . > /dev/null 2>&1 & '
+alias e.='thunar'
 alias height='tput lines'
 alias width='tput cols'
 alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
@@ -76,6 +77,10 @@ alias gfr='xdg-open "https://mail.google.com/mail/u/0/#inbox" > /dev/null 2>&1 &
 alias rn='sudo service network-manager restart'
 alias less='less -R'
 alias gpa='gpa --disable-x509'
+alias fetch='sudo cp -R /media/sf_virtualbox $HOME && sudo chown -R adean $HOME/sf_virtualbox'
+alias fs='git fetch && git status'
+alias lg='xfce4-session-logout --logout'
+alias anhero='sudo pkill -u $(whoami)'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
