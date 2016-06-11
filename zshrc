@@ -81,7 +81,7 @@ alias fetch='sudo cp -R /media/sf_virtualbox $HOME && sudo chown -R adean $HOME/
 alias fs='git fetch && git status'
 alias lg='xfce4-session-logout --logout'
 alias anhero='sudo pkill -u $(whoami)'
-alias sizes='du -sh * | sort -h'
+alias dush='du -sh * | sort -h'
 alias gs='git status'
 
 # Attempting to move the most recently downloaded file to the current directory...
