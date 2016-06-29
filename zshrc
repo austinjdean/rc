@@ -84,6 +84,7 @@ alias anhero='sudo pkill -u $(whoami)'
 alias dush='du -sh * | sort -h'
 alias gs='git status'
 alias udug='sudo apt-get update && sudo apt-get upgrade'
+alias gd='git diff'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
