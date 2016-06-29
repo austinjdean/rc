@@ -12,7 +12,7 @@ install:
 	mkdir -p $(HOME)/.config/tilda
 	cp $(PWD)/config_0 $(HOME)/.config/tilda/
 
-	# sublime
+	# sublime (FYI nukes your settings)
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
