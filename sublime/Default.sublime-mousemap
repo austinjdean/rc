@@ -1,0 +1,13 @@
+[
+	{
+		"button": "button2", "count": 1, "modifiers": ["ctrl"],
+		"press_command": "soft_undo",
+		"press_args": {}
+	},
+
+	{
+		"button": "button1", "count": 2, "modifiers": ["ctrl", "alt"],
+		"press_command": "toggle_bookmark",
+		"press_args": {}
+	}
+]

@@ -12,12 +12,19 @@ install:
 	mkdir -p $(HOME)/.config/tilda
 	cp $(PWD)/config_0 $(HOME)/.config/tilda/
 
-clean:
-	rm $(HOME)/.zshrc
-	rm $(HOME)/.vimrc
+	# sublime
+	mkdir -p $(HOME)/.config/sublime-text-3/Packages
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
-	sudo rm /usr/local/bin/ru
-	sudo rm /usr/local/bin/rs
-	sudo rm /usr/local/bin/gen
+clean:
+	rm -f $(HOME)/.zshrc
+	rm -f $(HOME)/.vimrc
+
+	sudo rm -f /usr/local/bin/ru
+	sudo rm -f /usr/local/bin/rs
+	sudo rm -f /usr/local/bin/gen
 
 	rm -f $(HOME)/.config/tilda/config_0
+
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User

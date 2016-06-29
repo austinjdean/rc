@@ -1,0 +1,9 @@
+[
+	{ "caption": "-" },
+	{
+		"command": "clone_file", "caption": "New View into File"
+	},
+	{
+		"command": "copy_path", "caption": "Copy File Path"
+	}
+]

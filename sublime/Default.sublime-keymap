@@ -1,0 +1,27 @@
+[
+    { "keys": ["ctrl+pagedown"], "command": "next_view_in_stack" },
+    { "keys": ["ctrl+pageup"], "command": "prev_view_in_stack" },
+
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+
+    { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+    { "keys": ["ctrl+shift+v"], "command": "paste" },
+
+    { "keys": ["ctrl+/"], "command": "vbs_comment", "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "source.vbs" }
+        ]
+    },
+
+    { "keys": ["escape"], "command": "single_selection", "context":
+        [
+            { "key": "num_selections", "operator": "not_equal", "operand": 1 }
+        ]
+    },
+    { "keys": ["alt+a"], "command": "find_all_under" },
+    { "keys": ["alt+q"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    { "keys": ["ctrl+shift+r"], "command": "goto_definition" },
+    { "keys": ["alt+b"], "command": "next_bookmark" },
+    { "keys": ["ctrl+shift+;"], "command": "end_semi" },
+]

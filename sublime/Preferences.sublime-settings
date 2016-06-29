@@ -1,0 +1,34 @@
+{
+	"added_words":
+	[
+		"indices",
+		"Ubuntu",
+		"plugins",
+		"plugin",
+		"app",
+		"apps",
+		"Phonegap",
+		"propter",
+		"dialogue",
+		"exoplanet",
+		"everything's",
+		"drippies",
+		"untrackable",
+		"grundle",
+		"humper"
+	],
+	"always_show_minimap_viewport": true,
+	"bentley_goto_definition": true,
+	"bentley_indent": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"font_size": 13,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"move_to_limit_on_up_down": true,
+	"overlay_scroll_bars": "enabled",
+	"show_tab_close_buttons": false,
+	"tab_completion": false
+}
