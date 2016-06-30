@@ -86,6 +86,9 @@ alias gs='git status'
 alias udug='sudo apt-get update && sudo apt-get upgrade'
 alias gd='git diff'
 
+# Lockheed
+alias lmpi='ssh pi@192.168.3.119'
+
 # Attempting to move the most recently downloaded file to the current directory...
 
 # alias test='mv ~/Downloads/$(readlink -f $(ls -rt | tail -n 1)) .'
