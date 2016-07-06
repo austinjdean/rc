@@ -85,6 +85,7 @@ alias dush='du -sh * | sort -h'
 alias gs='git status'
 alias udug='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias gd='git diff'
+alias ar='sudo apt-get autoremove -y'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
