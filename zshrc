@@ -83,7 +83,7 @@ alias lg='xfce4-session-logout --logout'
 alias anhero='sudo pkill -u $(whoami)'
 alias dush='du -sh * | sort -h'
 alias gs='git status'
-alias udug='sudo apt-get update && sudo apt-get upgrade'
+alias udug='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias gd='git diff'
 
 # Lockheed
