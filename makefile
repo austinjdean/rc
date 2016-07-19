@@ -3,10 +3,11 @@ install:
 	ln -s $(PWD)/zshrc $(HOME)/.zshrc
 	ln -s $(PWD)/vimrc $(HOME)/.vimrc
 
-	# put git update and status scripts in /usr/local/bin
+	# put symlinks to scripts in /usr/local/bin
 	sudo ln -s $(PWD)/update.sh /usr/local/bin/ru
 	sudo ln -s $(PWD)/status.sh /usr/local/bin/rs
 	sudo ln -s $(PWD)/gen.sh /usr/local/bin/gen
+	sudo ln -s $(PWD)/lns.sh /usr/local/bin/lns
 
 	# tilda config
 	mkdir -p $(HOME)/.config/tilda
@@ -24,6 +25,7 @@ clean:
 	sudo rm -f /usr/local/bin/ru
 	sudo rm -f /usr/local/bin/rs
 	sudo rm -f /usr/local/bin/gen
+	sudo rm -f /usr/local/bin/lns
 
 	rm -f $(HOME)/.config/tilda/config_0
 
