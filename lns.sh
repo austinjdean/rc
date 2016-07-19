@@ -4,7 +4,7 @@
 # $2 = link location
 
 if [[ -d $2 ]]; then # directory exists
-	# place in directory
+	# place in directory with same name as target executable
 	pants=${1##*/}
 	# thanks: http://stackoverflow.com/questions/3162385/how-to-split-a-string-in-shell-and-get-the-last-field
 	ln -s $(readlink -f $1) $(readlink -f $2)/$pants
