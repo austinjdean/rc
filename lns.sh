@@ -3,6 +3,8 @@
 # $1 = target
 # $2 = link location
 
+# http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
+
 if [[ -d $2 ]]; then # directory exists
 	# create symlink in directory with same name as target executable
 	pants=${1##*/}
