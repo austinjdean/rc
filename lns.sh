@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Creates absolute symlinks with relative pathnames
+
 # $1 = target
 # $2 = link location
 
