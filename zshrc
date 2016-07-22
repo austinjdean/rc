@@ -62,7 +62,7 @@ alias width='tput cols'
 alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
 alias l='less'
 alias fuck='sudo $(fc -ln -1)' # thanks: http://unix.stackexchange.com/a/158480/110877
-alias rd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1' # thanks: http://stackoverflow.com/a/1015684/2929868
+alias rmd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1' # thanks: http://stackoverflow.com/a/1015684/2929868
 alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
 alias n='nautilus'
 alias ld='cd ~/Downloads && readlink -f $(ls -rt | tail -n 1) && cd - > /dev/null 2>&1'
@@ -88,6 +88,8 @@ alias gd='git diff'
 alias ar='sudo apt-get autoremove -y'
 alias gl='git diff HEAD^ HEAD'
 alias rly='cd $(pwd -P)'
+alias rd='rmdir'
+alias md='mkdir -p'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
