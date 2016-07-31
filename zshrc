@@ -11,7 +11,8 @@ xset r rate 220 40 > /dev/null 2>&1
 calc() {
 	calc="${@//p/+}"
 	calc="${calc//x/*}"
-	bc -l <<<"scale=10;$calc"
+	ans=$(bc -l <<<"scale=10;$calc")
+	echo $ans
 }
 
 rand() {
