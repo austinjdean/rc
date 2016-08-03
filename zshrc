@@ -19,6 +19,11 @@ rand() {
 	echo "$(((RANDOM % $1) + 1))"
 }
 
+backup() {
+	mkdir -p ~/.backup
+	cp -r "$@" ~/.backup
+}
+
 declare -i ID
 ID=`xinput list 2>/dev/null | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
 alias toff='xinput set-prop $ID "Device Enabled" 0'
