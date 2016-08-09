@@ -98,6 +98,8 @@ alias md='mkdir -p'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
+alias tcp='sudo tcpdump -n -s 0 -c 20 -w ~/sandbox/pants -i eth0 tcp && sudo tcpdump -r pants > pants.ascii'
+# alias tcp='sudo tcpdump -n -s 0 -c 20 -w ~/sandbox/pants -i eth0 tcp and dst 192.168.3.130 && sudo tcpdump -r pants > pants.ascii'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
