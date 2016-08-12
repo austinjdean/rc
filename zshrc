@@ -96,6 +96,7 @@ alias gl='git diff HEAD^ HEAD'
 alias rly='cd $(pwd -P)'
 alias rd='rmdir'
 alias md='mkdir -p'
+alias int='ping -c 1 google.com'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
