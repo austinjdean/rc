@@ -96,6 +96,8 @@ alias gl='git diff HEAD^ HEAD'
 alias rly='cd $(pwd -P)'
 alias rd='rmdir'
 alias md='mkdir -p'
+alias gimme='sudo apt-get install -y'
+alias purge='sudo apt-get purge -y'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
