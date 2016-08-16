@@ -96,6 +96,7 @@ alias gl='git diff HEAD^ HEAD'
 alias rly='cd $(pwd -P)'
 alias rd='rmdir'
 alias md='mkdir -p'
+alias int='ping -c 1 google.com'
 alias gimme='sudo apt-get install -y'
 alias purge='sudo apt-get purge -y'
 
