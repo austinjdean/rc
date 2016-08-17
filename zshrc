@@ -20,8 +20,8 @@ rand() {
 }
 
 backup() {
-	mkdir -p ~/.backup
-	cp -r "$@" ~/.backup
+	mkdir -p ~/.backup/$(date | tr ' ' '-')
+	cp -r "$@" ~/.backup/$(date | tr ' ' '-')
 }
 
 declare -i ID
@@ -82,7 +82,6 @@ alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
 alias gfr='xdg-open "https://mail.google.com/mail/u/0/#inbox" > /dev/null 2>&1 && xdg-open "https://www.facebook.com/" > /dev/null 2>&1 && xdg-open "https://www.reddit.com/" > /dev/null 2>&1'
 alias rn='sudo service network-manager restart'
 alias less='less -R'
-alias gpa='gpa --disable-x509'
 alias fetch='sudo cp -R /media/sf_virtualbox $HOME && sudo chown -R adean $HOME/sf_virtualbox'
 alias fs='git fetch && git status'
 alias lg='xfce4-session-logout --logout'
@@ -99,6 +98,7 @@ alias md='mkdir -p'
 alias int='ping -c 1 google.com'
 alias gimme='sudo apt-get install -y'
 alias purge='sudo apt-get purge -y'
+alias search='apt-cache search'
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
@@ -135,6 +135,7 @@ alias work='ssh -XY adean@144.118.172.123'
 alias sil='ssh -XY adean@144.118.172.120'
 alias scl='svn co file://`echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/project-repo' # requires additional arg - name of clone
 alias scr='svn co svn+ssh://ajd336@tux.cs.drexel.edu:/home/ajd336/courses/cs283/svn/project-repo `echo $HOME`/Dropbox/Drexel/Term2/CS283/svn/projects'
+alias gpa='gpa --disable-x509'
 
 # Path stuff
 
