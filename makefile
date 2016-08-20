@@ -8,6 +8,7 @@ install:
 	sudo ln -s $(PWD)/status.sh /usr/local/bin/rs
 	sudo ln -s $(PWD)/gen.sh /usr/local/bin/gen
 	sudo ln -s $(PWD)/lns.sh /usr/local/bin/lns
+	sudo ln -s $(PWD)/defaults.sh /usr/local/bin/defaults
 
 	# tilda config
 	mkdir -p $(HOME)/.config/tilda
@@ -26,6 +27,7 @@ clean:
 	sudo rm -f /usr/local/bin/rs
 	sudo rm -f /usr/local/bin/gen
 	sudo rm -f /usr/local/bin/lns
+	sudo rm -f /usr/local/bin/defaults
 
 	rm -f $(HOME)/.config/tilda/config_0
 
