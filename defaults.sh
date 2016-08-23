@@ -2,8 +2,21 @@
 
 defaultDirectories=(Desktop Documents Downloads Music Pictures Public Templates Videos)
 
+exitStatus=1
+
 for dir in ${defaultDirectories[@]}; do
 	mkdir -p $HOME/defaults/$dir
-	mv -v -- $HOME/$dir/* $HOME/defaults/$dir 2> /dev/null
+	if [[ "$@" == "-v" ]]; then
+		echo Moving $dir
+	fi
+	mv $HOME/$dir/* $HOME/defaults/$dir 2> /dev/null
+	if [[ $? == 0 ]]; then
+		exitStatus=0
+	fi
 	rmdir $dir 2> /dev/null
+	if [[ $? == 0 ]]; then
+		exitStatus=0
+	fi
 done
+
+exit $exitStatus

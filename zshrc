@@ -39,9 +39,9 @@ alias et='exit'
 alias sb='subl'
 alias ..='cd ..'
 alias ~='cd ~'
-alias la='ls -a'
+alias la='ls -A'
 alias ll='ls -l'
-alias lla='ls -la'
+alias lla='ls -lA'
 alias editrc='subl ~/.zshrc'
 alias ngrep='grep -n'
 alias ingrep='grep -in'
@@ -86,7 +86,7 @@ alias fetch='sudo cp -R /media/sf_virtualbox $HOME && sudo chown -R adean $HOME/
 alias fs='git fetch && git status'
 alias lg='xfce4-session-logout --logout'
 alias anhero='sudo pkill -u $(whoami)'
-alias dush='du -sh * | sort -h'
+alias dush='du -sch * | sort -h'
 alias gs='git status'
 alias gd='git diff'
 alias gp='git pull'
@@ -2600,7 +2600,7 @@ if [[ "$TERM" != dumb ]]; then
 	#a1# List files with colors (\kbd{ls -F \ldots})
 	alias ls='command ls -F '${ls_options:+"${ls_options[*]}"}
 	#a1# List all files, with colors (\kbd{ls -a \ldots})
-	alias la='command ls -a '${ls_options:+"${ls_options[*]}"}
+	# alias la='command ls -a '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, without dotfiles (\kbd{ls -l \ldots})
 	alias ll='command ls -l '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, human readable sizes (\kbd{ls -hAl \ldots})
@@ -2609,7 +2609,7 @@ if [[ "$TERM" != dumb ]]; then
 	# alias l='command ls -lF '${ls_options:+"${ls_options[*]}"}
 else
 	alias ls='command ls -F'
-	alias la='command ls -a'
+	# alias la='command ls -a'
 	alias ll='command ls -l'
 	alias lh='command ls -hAl'
 	# alias l='command ls -lF'
