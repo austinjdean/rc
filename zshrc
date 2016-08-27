@@ -39,9 +39,9 @@ alias et='exit'
 alias sb='subl'
 alias ..='cd ..'
 alias ~='cd ~'
-alias la='ls -A'
-alias ll='ls -l'
-alias lla='ls -lA'
+alias la='ls -Ah'
+alias ll='ls -lh'
+alias lla='ls -lAh'
 alias editrc='subl ~/.zshrc'
 alias ngrep='grep -n'
 alias ingrep='grep -in'
@@ -100,6 +100,7 @@ alias int='ping -c 1 google.com'
 alias gimme='sudo apt-get install -y'
 alias purge='sudo apt-get purge -y'
 alias search='apt-cache search'
+alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
@@ -2602,7 +2603,7 @@ if [[ "$TERM" != dumb ]]; then
 	#a1# List all files, with colors (\kbd{ls -a \ldots})
 	# alias la='command ls -a '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, without dotfiles (\kbd{ls -l \ldots})
-	alias ll='command ls -l '${ls_options:+"${ls_options[*]}"}
+	# alias ll='command ls -l '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, human readable sizes (\kbd{ls -hAl \ldots})
 	alias lh='command ls -hAl '${ls_options:+"${ls_options[*]}"}
 	#a1# List files with long colored list, append qualifier to filenames (\kbd{ls -lF \ldots})\\&\quad(\kbd{/} for directories, \kbd{@} for symlinks ...)
@@ -2610,7 +2611,7 @@ if [[ "$TERM" != dumb ]]; then
 else
 	alias ls='command ls -F'
 	# alias la='command ls -a'
-	alias ll='command ls -l'
+	# alias ll='command ls -l'
 	alias lh='command ls -hAl'
 	# alias l='command ls -lF'
 fi

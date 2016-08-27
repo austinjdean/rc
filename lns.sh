@@ -7,6 +7,12 @@
 
 # http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 
+if [[ "$@" == "-h" ]]; then
+	echo "\$1 = target"
+	echo "\$2 = link location"
+	exit 0
+fi
+
 if [[ -d $2 ]]; then # directory exists
 	# create symlink in directory with same name as target executable
 	pants=${1##*/}
