@@ -100,6 +100,7 @@ alias int='ping -c 1 google.com'
 alias gimme='sudo apt-get install -y'
 alias purge='sudo apt-get purge -y'
 alias search='apt-cache search'
+alias dist='sudo apt-get dist-upgrade'
 alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 
 # Lockheed
