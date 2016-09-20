@@ -42,11 +42,11 @@ limited:
 	mkdir -p $(HOME)/bin
 
 	# put symlinks to scripts in ~/bin
-	sudo ln -s $(PWD)/update.sh $(HOME)/bin/ru
-	sudo ln -s $(PWD)/status.sh $(HOME)/bin/rs
-	sudo ln -s $(PWD)/gen.sh $(HOME)/bin/gen
-	sudo ln -s $(PWD)/lns.sh $(HOME)/bin/lns
-	sudo ln -s $(PWD)/defaults.sh $(HOME)/bin/defaults
+	ln -s $(PWD)/update.sh $(HOME)/bin/ru
+	ln -s $(PWD)/status.sh $(HOME)/bin/rs
+	ln -s $(PWD)/gen.sh $(HOME)/bin/gen
+	ln -s $(PWD)/lns.sh $(HOME)/bin/lns
+	ln -s $(PWD)/defaults.sh $(HOME)/bin/defaults
 
 	# tilda config
 	mkdir -p $(HOME)/.config/tilda
@@ -61,11 +61,7 @@ cleanLimited:
 	rm -f $(HOME)/.zshrc
 	rm -f $(HOME)/.vimrc
 
-	sudo rm -f $(HOME)/bin/ru
-	sudo rm -f $(HOME)/bin/rs
-	sudo rm -f $(HOME)/bin/gen
-	sudo rm -f $(HOME)/bin/lns
-	sudo rm -f $(HOME)/bin/defaults
+	rm -rf $(HOME)/bin
 
 	rm -f $(HOME)/.config/tilda/config_0
 
