@@ -32,3 +32,38 @@ clean:
 	rm -f $(HOME)/.config/tilda/config_0
 
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+
+limited:
+	# put zshrc and vimrc in ~
+	ln -s $(PWD)/zshrc $(HOME)/.zshrc
+	ln -s $(PWD)/vimrc $(HOME)/.vimrc
+
+	# put symlinks to scripts in ~/bin
+	sudo ln -s $(PWD)/update.sh $(HOME)/bin/ru
+	sudo ln -s $(PWD)/status.sh $(HOME)/bin/rs
+	sudo ln -s $(PWD)/gen.sh $(HOME)/bin/gen
+	sudo ln -s $(PWD)/lns.sh $(HOME)/bin/lns
+	sudo ln -s $(PWD)/defaults.sh $(HOME)/bin/defaults
+
+	# tilda config
+	mkdir -p $(HOME)/.config/tilda
+	cp $(PWD)/config_0 $(HOME)/.config/tilda/
+
+	# sublime (FYI nukes your settings)
+	mkdir -p $(HOME)/.config/sublime-text-3/Packages
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
+
+cleanLimited:
+	rm -f $(HOME)/.zshrc
+	rm -f $(HOME)/.vimrc
+
+	sudo rm -f $(HOME)/bin/ru
+	sudo rm -f $(HOME)/bin/rs
+	sudo rm -f $(HOME)/bin/gen
+	sudo rm -f $(HOME)/bin/lns
+	sudo rm -f $(HOME)/bin/defaults
+
+	rm -f $(HOME)/.config/tilda/config_0
+
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
