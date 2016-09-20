@@ -38,6 +38,9 @@ limited:
 	ln -s $(PWD)/zshrc $(HOME)/.zshrc
 	ln -s $(PWD)/vimrc $(HOME)/.vimrc
 
+	# ensure ~/bin exists
+	mkdir -p $(HOME)/bin
+
 	# put symlinks to scripts in ~/bin
 	sudo ln -s $(PWD)/update.sh $(HOME)/bin/ru
 	sudo ln -s $(PWD)/status.sh $(HOME)/bin/rs
