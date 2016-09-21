@@ -102,6 +102,7 @@ alias purge='sudo apt-get purge -y'
 alias search='apt-cache search'
 alias dist='sudo apt-get dist-upgrade'
 alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
+alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
 
 # Lockheed
 alias lmpi='ssh pi@192.168.3.119'
