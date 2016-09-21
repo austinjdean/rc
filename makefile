@@ -32,3 +32,37 @@ clean:
 	rm -f $(HOME)/.config/tilda/config_0
 
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+
+limited:
+	# put zshrc and vimrc in ~
+	ln -s $(PWD)/zshrc $(HOME)/.zshrc
+	ln -s $(PWD)/vimrc $(HOME)/.vimrc
+
+	# ensure ~/bin exists
+	mkdir -p $(HOME)/bin
+
+	# put symlinks to scripts in ~/bin
+	ln -s $(PWD)/update.sh $(HOME)/bin/ru
+	ln -s $(PWD)/status.sh $(HOME)/bin/rs
+	ln -s $(PWD)/gen.sh $(HOME)/bin/gen
+	ln -s $(PWD)/lns.sh $(HOME)/bin/lns
+	ln -s $(PWD)/defaults.sh $(HOME)/bin/defaults
+
+	# tilda config
+	mkdir -p $(HOME)/.config/tilda
+	cp $(PWD)/config_0 $(HOME)/.config/tilda/
+
+	# sublime (FYI nukes your settings)
+	mkdir -p $(HOME)/.config/sublime-text-3/Packages
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
+
+cleanLimited:
+	rm -f $(HOME)/.zshrc
+	rm -f $(HOME)/.vimrc
+
+	rm -rf $(HOME)/bin
+
+	rm -f $(HOME)/.config/tilda/config_0
+
+	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
