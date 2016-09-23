@@ -29,6 +29,12 @@ ID=`xinput list 2>/dev/null | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[
 alias toff='xinput set-prop $ID "Device Enabled" 0'
 alias ton='xinput set-prop $ID "Device Enabled" 1'
 
+# DISPLAY variable
+# thanks: http://stackoverflow.com/a/13864829/2929868
+if [ -z ${DISPLAY+x} ]; then
+	export DISPLAY=:0
+fi
+
 # Aliases
 
 # Always useful
