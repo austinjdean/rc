@@ -109,6 +109,7 @@ alias search='apt-cache search'
 alias dist='sudo apt-get dist-upgrade'
 alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
+alias here="mv ~/incoming/* ."
 alias cs338="mkdir -p ~/git/drexel/cs338/incoming && cp -r /mnt/s/cs338-hw/* ~/git/drexel/cs338/incoming/"
 
 # Lockheed
