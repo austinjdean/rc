@@ -97,6 +97,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gp='git pull'
 alias gl='git diff HEAD^ HEAD'
+alias gp="git pull"
 alias udug='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias ar='sudo apt-get autoremove -y'
 alias rly='cd $(pwd -P)'
@@ -111,11 +112,7 @@ alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
 alias here="mv ~/incoming/* ."
 alias cs338="mkdir -p ~/git/drexel/cs338/incoming && cp -r /mnt/s/cs338-hw/* ~/git/drexel/cs338/incoming/"
-
-# Lockheed
-alias lmpi='ssh pi@192.168.3.119'
-alias tcp='sudo tcpdump -n -s 0 -c 20 -w ~/sandbox/pants -i eth0 tcp && sudo tcpdump -r pants > pants.ascii'
-# alias tcp='sudo tcpdump -n -s 0 -c 20 -w ~/sandbox/pants -i eth0 tcp and dst 192.168.3.130 && sudo tcpdump -r pants > pants.ascii'
+alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
