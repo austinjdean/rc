@@ -113,6 +113,7 @@ alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
 alias here="mv ~/incoming/* ."
 alias cs338="mkdir -p ~/git/drexel/cs338/incoming && cp -r /mnt/s/cs338-hw/* ~/git/drexel/cs338/incoming/"
 alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
+alias rec="find . -name"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
