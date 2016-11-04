@@ -24,6 +24,14 @@ backup() {
 	cp -r "$@" ~/.backup/$(date | tr ' ' '-')
 }
 
+td() {
+	tar -zcvf $1.tar.gz $1
+}
+
+ut() {
+	tar -zxvf $1
+}
+
 declare -i ID
 ID=`xinput list 2>/dev/null | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
 alias toff='xinput set-prop $ID "Device Enabled" 0'
