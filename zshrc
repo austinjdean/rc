@@ -123,6 +123,7 @@ alias cs338="mkdir -p ~/git/drexel/cs338/incoming && cp -r /mnt/s/cs338-hw/* ~/g
 alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
 alias rec="find . -name"
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
+alias sp="ps -ef | grep"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
