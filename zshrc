@@ -31,10 +31,12 @@ rmsp() {
 	true
 }
 
-pw() {
-	cd /mnt/s/wallpapers/meta/
-	bash manager.sh
-	cd - > /dev/null 2>&1
+td() {
+	tar -zcvf $1.tar.gz $1
+}
+
+ut() {
+	tar -zxvf $1
 }
 
 declare -i ID
@@ -130,6 +132,7 @@ alias rec="find . -name"
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
 alias wp="cd /mnt/s/wallpapers"
 alias wpm="cd /mnt/s/wallpapers/meta"
+alias sp="ps -ef | grep"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
