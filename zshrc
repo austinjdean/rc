@@ -24,6 +24,13 @@ backup() {
 	cp -r "$@" ~/.backup/$(date | tr ' ' '-')
 }
 
+rmsp() {
+	for f in *\ *; do mv --no-clobber "$f" "${f// /-}" > /dev/null 2>&1; done
+	for f in *---*; do mv --no-clobber "$f" "${f//---/-}" > /dev/null 2>&1; done
+	for f in *--*; do mv --no-clobber "$f" "${f//--/-}" > /dev/null 2>&1; done
+	true
+}
+
 td() {
 	tar -zcvf $1.tar.gz $1
 }
@@ -127,6 +134,8 @@ alias cs338="mkdir -p ~/git/drexel/cs338/incoming && cp -r /mnt/s/cs338-hw/* ~/g
 alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
 alias rec="find . -name"
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
+alias wp="cd /mnt/s/wallpapers"
+alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | grep"
 
 # Attempting to move the most recently downloaded file to the current directory...
