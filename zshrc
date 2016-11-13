@@ -32,6 +32,10 @@ ut() {
 	tar -zxvf $1
 }
 
+# wm() {
+# 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
+# }
+
 declare -i ID
 ID=`xinput list 2>/dev/null | grep -Eo 'TouchPad\s*id\=[0-9]{1,2}' | grep -Eo '[0-9]{1,2}'`
 alias toff='xinput set-prop $ID "Device Enabled" 0'
