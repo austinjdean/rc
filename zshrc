@@ -2229,7 +2229,7 @@ grml_prompt_token_default=(
 	jobs			  '[%j running job(s)] '
 	newline		   $'\n'
 	path			  '%40<..<%~%<< '
-	percent		   '%# '
+	percent		   'λ '
 	rc				'%(?..%? )'
 	rc-always		 '%?'
 	sad-smiley		'%(?..:()'
