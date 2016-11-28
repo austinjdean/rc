@@ -15,7 +15,8 @@
 		"drippies",
 		"untrackable",
 		"grundle",
-		"humper"
+		"humper",
+		"screenshot"
 	],
 	"always_show_minimap_viewport": true,
 	"bentley_goto_definition": true,
