@@ -137,6 +137,8 @@ alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
 alias wp="cd /mnt/s/wallpapers"
 alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | grep"
+alias wips="sudo arp-scan --interface=wlan0 --localnet"
+alias eips="sudo arp-scan --interface=eth0 --localnet"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
