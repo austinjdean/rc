@@ -7,7 +7,7 @@
 
 # http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html
 
-if [[ "$@" == "-h" ]]; then
+if [[ "$@" == "-h" ]] || [[ -z "$@" ]]; then
 	echo "\$1 = target"
 	echo "\$2 = link location"
 	exit 0
