@@ -139,6 +139,7 @@ alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | grep"
 alias wips="sudo arp-scan --interface=wlan0 --localnet"
 alias eips="sudo arp-scan --interface=eth0 --localnet"
+alias ips="sudo arp-scan -l"
 
 # Attempting to move the most recently downloaded file to the current directory...
 
