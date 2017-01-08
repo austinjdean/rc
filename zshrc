@@ -142,6 +142,12 @@ alias wips="sudo arp-scan --interface=wlan0 --localnet"
 alias eips="sudo arp-scan --interface=eth0 --localnet"
 alias ips="sudo arp-scan -l"
 
+# rsync aliases
+alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
+alias it2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ adean@192.168.1.16:/home/adean/defaults/Music/nightingale/"
+alias wp2z="rsync -rhuv --exclude=.git --delete /mnt/s/wallpapers/ /mnt/z/wallpapers/"
+alias it2z="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ /mnt/z/music/"
+
 # Attempting to move the most recently downloaded file to the current directory...
 
 # alias test='mv ~/Downloads/$(readlink -f $(ls -rt | tail -n 1)) .'
