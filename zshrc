@@ -117,6 +117,7 @@ alias gd='git diff'
 alias gp='git pull'
 alias gl='git diff HEAD^ HEAD'
 alias gp="git pull"
+alias discard="git checkout ."
 alias udug='sudo apt-get update -y && sudo apt-get upgrade -y'
 alias ar='sudo apt-get autoremove -y'
 alias rly='cd $(pwd -P)'
