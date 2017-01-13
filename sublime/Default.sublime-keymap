@@ -21,7 +21,6 @@
     },
     { "keys": ["alt+a"], "command": "find_all_under" },
     { "keys": ["alt+q"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
-    { "keys": ["ctrl+shift+r"], "command": "goto_definition" },
     { "keys": ["alt+b"], "command": "next_bookmark" },
     { "keys": ["ctrl+shift+;"], "command": "end_semi" },
 ]
