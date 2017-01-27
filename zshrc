@@ -39,6 +39,10 @@ ut() {
 	tar -zxvf $1
 }
 
+zd() {
+	zip -r $1.zip $1
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
