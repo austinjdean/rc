@@ -16,7 +16,8 @@
 		"untrackable",
 		"grundle",
 		"humper",
-		"screenshot"
+		"screenshot",
+		"pre"
 	],
 	"always_show_minimap_viewport": true,
 	"bentley_goto_definition": true,
