@@ -5,7 +5,7 @@ if [ -z "$1" ]; then
 	exit 1
 else
 	if [ $1 = "e" ]; then
-		echo scp -r $(whoami)@$(ifconfig eth0 | perl -nle 's/dr:(\S+)/print $1/e'):$(pwd)/* .
+		echo scp -r $(whoami)@$(ifconfig ens33 | perl -nle 's/dr:(\S+)/print $1/e'):$(pwd)/* .
 	elif [ $1 = "w" ]; then
 		echo scp -r $(whoami)@$(ifconfig wlan0 | perl -nle 's/dr:(\S+)/print $1/e'):$(pwd)/* .
 	else
