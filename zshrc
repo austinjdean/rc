@@ -155,6 +155,7 @@ alias eips="sudo arp-scan --interface=eth0 --localnet"
 alias ips="sudo arp-scan -l"
 alias temp="sensors | egrep 'CPU:|Processor Fan:'"
 alias watch="watch -n 1 'zsh -i -c '"
+alias vm="ssh adean@192.168.253.128"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
