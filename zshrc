@@ -43,6 +43,14 @@ zd() {
 	zip -r $1.zip $1
 }
 
+res() {
+	if [ -z "$1" ]; then
+		xdpyinfo | grep dimensions
+	else
+		identify -format "%wx%h  %f\n" $1
+	fi
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -147,7 +155,6 @@ alias eips="sudo arp-scan --interface=eth0 --localnet"
 alias ips="sudo arp-scan -l"
 alias temp="sensors | egrep 'CPU:|Processor Fan:'"
 alias watch="watch -n 1 'zsh -i -c '"
-alias res="xdpyinfo | grep dimensions"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
