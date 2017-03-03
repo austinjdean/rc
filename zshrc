@@ -158,6 +158,7 @@ alias watch="watch -n 1 'zsh -i -c '"
 alias vm="ssh adean@192.168.253.128"
 alias lx="cd /mnt/s/to-lxss/"
 alias qp="ping -c1 -W1"
+alias mac="ifconfig | grep HWaddr"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
