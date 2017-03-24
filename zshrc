@@ -51,6 +51,68 @@ res() {
 	fi
 }
 
+lock() {
+	if [ -z "$1" ]; then # no args
+		echo "which dirs or files u dummy"
+		return 1
+	else
+		for current in "$@"; do
+			echo "file: $current"
+			# fuckin need to babysit tar over here
+			if [ -e "$current" ]; then # if file exists
+				tar -zcf "$current".tar.gz "$current"
+			else
+				echo " E file don't exist mang"
+				echo " E skipping to next file"
+				continue
+			fi
+			echo " - tar complete"
+			gpg -er austinjdean "$current".tar.gz
+			echo " - encryption complete"
+			rm "$current".tar.gz
+			echo " - removal of tar complete"
+			rm -rf "$current"
+			echo " - removal of original file complete"
+			echo " * $current complete"
+		done
+	fi
+}
+
+unlock() {
+	if [ -z "$1" ]; then # no args
+		echo "which encrypted files u dummy"
+		return 1
+	else
+		for current in "$@"; do
+			echo "file: $current"
+			# fuckin need to babysit gpg over here
+			if [ -e "$current" ]; then # if file exists
+				gpg "$current"
+				if [ "$?" -ne 0 ]; then # if return status of that wasn't 0
+					echo " E can't decrypt that shit"
+					echo " E skipping to next file"
+					continue
+				fi
+			else
+				echo " E file don't exist mang"
+				echo " E skipping to next file"
+				continue
+			fi
+			echo " - decryption complete"
+			original=$current # preserve original filename
+			# cut .gpg file extension off $current
+			current=${current:0:-4}
+			tar -zxf "$current" # untar
+			echo " - untar complete"
+			rm "$current" # remove tar
+			echo " - removal of tar complete"
+			rm "$original" # remove encrypted tar
+			echo " - removal of encrypted file complete"
+			echo " * $current complete"
+		done
+	fi
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
