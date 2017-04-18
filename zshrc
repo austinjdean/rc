@@ -113,6 +113,13 @@ unlock() {
 	fi
 }
 
+rdups() {
+	# if you really care that much about the original file....
+	cp $1 $1\~
+	# LET'S GET DOWN TO BUSINESS
+	sort -u "$1" -o "$1"
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
