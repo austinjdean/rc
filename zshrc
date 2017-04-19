@@ -120,6 +120,14 @@ rdups() {
 	sort -u "$1" -o "$1"
 }
 
+rn() {
+	sudo service network-manager restart > /dev/null 2>&1
+	sudo restart network-manager > /dev/null 2>&1
+	sudo service networking restart > /dev/null 2>&1
+	sudo restart networking > /dev/null 2>&1
+	true
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -173,7 +181,6 @@ alias topdf='unoconv -f pdf *.ppt* && rm *.ppt*'
 alias c='head -c -1 | xclip -selection clipboard'
 # alias round='echo $x | xargs printf "%.*f\n" $p' # thanks: http://unix.stackexchange.com/questions/167058/how-to-round-floating-point-numbers-in-shell
 alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
-alias rn='sudo service network-manager restart ; sudo restart network-manager > /dev/null 2>&1; true'
 alias less='less -R'
 alias lg='xfce4-session-logout --logout'
 alias anhero='sudo pkill -u $(whoami)'
