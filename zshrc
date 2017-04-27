@@ -221,6 +221,7 @@ alias mac="ifconfig | grep HWaddr"
 alias deb="sudo dpkg -i"
 alias nuke="shred -uz"
 alias quad="quadrapassel"
+alias scrub="truncate -s 0"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
