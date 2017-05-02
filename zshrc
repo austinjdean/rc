@@ -243,11 +243,11 @@ alias ent2z='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192
 
 # Need a sanitize alias to remove spaces from downloaded file names and a move alias to move the file to the current dir.
 
-alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
+# alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
 
-alias pants="find ~/Downloads/ -type f | xargs ls -ltr > /dev/null 2>&1 | tail -n 1 | grep -o '[^ ]*$'"
+# alias pants="find ~/Downloads/ -type f | xargs ls -ltr > /dev/null 2>&1 | tail -n 1 | grep -o '[^ ]*$'"
 
-alias movehere='$(sanitize) & mv $(pants) .'
+# alias movehere='$(sanitize) & mv $(pants) .'
 
 # end attempt section
 
