@@ -115,7 +115,7 @@ unlock() {
 
 rdups() {
 	# if you really care that much about the original file....
-	cp "$1" "$1".orig
+	cp "$1" "$1"\~
 	# LET'S GET DOWN TO BUSINESS
 	sort -u "$1" -o "$1"
 }
