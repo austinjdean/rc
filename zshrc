@@ -225,9 +225,9 @@ alias scrub="truncate -s 0"
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
 # alias it2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ adean@192.168.1.16:/home/adean/defaults/Music/nightingale/"
-alias wp2z="rsync -rhuv --exclude=.git --delete /mnt/s/wallpapers/ /mnt/z/wallpapers/"
-alias it2z="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ /mnt/z/music/"
-alias ent2z='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192.168.1.121:/home/adean/ /mnt/z/entropy/'
+alias wp2x="rsync -rhuv --exclude=.git --delete /mnt/s/wallpapers/ /mnt/x/wallpapers/"
+alias it2x="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ /mnt/x/music/"
+alias ent2x='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192.168.1.121:/home/adean/ /mnt/x/entropy/'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
