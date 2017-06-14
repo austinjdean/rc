@@ -115,7 +115,7 @@ unlock() {
 
 rdups() {
 	# if you really care that much about the original file....
-	cp "$1" "$1".orig
+	cp "$1" "$1"\~
 	# LET'S GET DOWN TO BUSINESS
 	sort -u "$1" -o "$1"
 }
@@ -224,10 +224,10 @@ alias scrub="truncate -s 0"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
-alias it2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ adean@192.168.1.16:/home/adean/defaults/Music/nightingale/"
-alias wp2z="rsync -rhuv --exclude=.git --delete /mnt/s/wallpapers/ /mnt/z/wallpapers/"
-alias it2z="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ /mnt/z/music/"
-alias ent2z='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192.168.1.121:/home/adean/ /mnt/z/entropy/'
+# alias it2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ adean@192.168.1.16:/home/adean/defaults/Music/nightingale/"
+alias wp2x="rsync -rhuv --exclude=.git --delete /mnt/s/wallpapers/ /mnt/x/wallpapers/"
+alias it2x="rsync -rhuv --exclude=.git --delete /mnt/s/Music/iTunes/iTunes\ Media/Music/ /mnt/x/music/"
+alias ent2x='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192.168.1.121:/home/adean/ /mnt/x/entropy/'
 
 # Attempting to move the most recently downloaded file to the current directory...
 
@@ -243,11 +243,11 @@ alias ent2z='rsync -rhuv --delete --exclude=".*/" --exclude=".viminfo" adean@192
 
 # Need a sanitize alias to remove spaces from downloaded file names and a move alias to move the file to the current dir.
 
-alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
+# alias sanitize='for f in ~/Downloads/*\ *; do mv "$f" "${f// /-}"; done > /dev/null 2>&1' # good
 
-alias pants="find ~/Downloads/ -type f | xargs ls -ltr > /dev/null 2>&1 | tail -n 1 | grep -o '[^ ]*$'"
+# alias pants="find ~/Downloads/ -type f | xargs ls -ltr > /dev/null 2>&1 | tail -n 1 | grep -o '[^ ]*$'"
 
-alias movehere='$(sanitize) & mv $(pants) .'
+# alias movehere='$(sanitize) & mv $(pants) .'
 
 # end attempt section
 
