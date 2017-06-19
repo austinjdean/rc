@@ -222,6 +222,7 @@ alias nuke="shred -uz"
 alias quad="quadrapassel"
 alias scrub="truncate -s 0"
 alias shh="unset HISTFILE"
+alias sl="sl -e"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
