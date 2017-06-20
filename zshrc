@@ -263,13 +263,13 @@ alias gpa='gpa --disable-x509'
 
 # Path stuff
 
-export PATH=${PATH}:$HOME/bin
+export PATH=${PATH}:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jdk1.7.0.80/bin:/usr/lib/jdk1.7.0.80/db/bin:/usr/lib/jdk1.7.0.80/jre/bin:/root/bin:/usr/lib/jdk1.7.0.80/jdk/bin
 
 # export ANDROID_HOME=/usr/local/android-sdk-linux
 # export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-export JAVA_HOME=/usr/local/jdk1.8.0_45
-export PATH=${PATH}:$JAVA_HOME/bin
+export JAVA_HOME=/usr/lib/jdk1.7.0.80/jdk
+#export PATH=${PATH}:$JAVA_HOME/bin
 
 # export PHONEGAP_HOME=/home/adean/node_modules/phonegap
 # export PATH=${PATH}:$PHONEGAP_HOME/bin

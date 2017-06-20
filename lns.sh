@@ -9,7 +9,7 @@
 
 if [[ "$@" == "-h" ]] || [[ -z "$@" ]]; then
 	echo "\$1 = target"
-	echo "\$2 = link location"
+	echo "\$2 = link name"
 	exit 0
 fi
 
