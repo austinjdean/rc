@@ -128,6 +128,10 @@ rn() {
 	true
 }
 
+arc() {
+	mv "$1" ."$1"\~
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
