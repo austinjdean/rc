@@ -132,6 +132,10 @@ arc() {
 	mv "$1" ."$1"\~
 }
 
+search() {
+	apt-cache search "$1" | egrep -v '^lib'
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -203,7 +207,6 @@ alias md='mkdir -p'
 alias int='ping -c1 -W1 8.8.8.8'
 alias gimme='sudo apt-get install -y'
 alias purge='sudo apt-get purge -y'
-alias search='apt-cache search'
 alias dist='sudo apt-get dist-upgrade -y'
 alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
