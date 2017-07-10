@@ -23,5 +23,9 @@
     { "keys": ["alt+q"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
     { "keys": ["alt+b"], "command": "next_bookmark" },
     { "keys": ["ctrl+shift+;"], "command": "end_semi" },
-    { "keys": ["ctrl+b"], "command": "bullet" },
+    { "keys": ["ctrl+h"], "command": "bullet" },
+    { "keys": ["alt+s"], "command": "toggle_in_selection", "context":
+        { "key": "setting.is_widget", "operator": "equal", "operand": true }
+    },
 ]
+
