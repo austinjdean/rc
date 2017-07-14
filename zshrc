@@ -156,7 +156,6 @@ fi
 # Always useful
 
 alias refresh='source ~/.zshrc'
-alias cr='google-chrome'
 alias et='exit'
 alias sb='subl'
 alias ..='cd ..'
@@ -230,7 +229,13 @@ alias quad="quadrapassel"
 alias scrub="truncate -s 0"
 alias shh="unset HISTFILE"
 alias sl="sl -e"
-alias cw="ls -lAh | egrep '^........w'"
+alias cr="ls -lAh | egrep '^.......r..'"
+alias cw="ls -lAh | egrep '^........w.'"
+alias cx="ls -lAh | egrep '^.........x'"
+alias crw="ls -lAh | egrep '^.......rw.'"
+alias crx="ls -lAh | egrep '^.......r.x'"
+alias cwx="ls -lAh | egrep '^........wx'"
+alias ca="ls -lAh | egrep '^.......rwx'"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
