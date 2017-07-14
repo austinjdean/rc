@@ -136,6 +136,12 @@ search() {
 	apt-cache search "$1" | egrep -v '^lib'
 }
 
+sex() {
+	for f in *; do
+		mv "$f" "${f%.*}"
+	done
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
