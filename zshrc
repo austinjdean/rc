@@ -136,7 +136,7 @@ search() {
 	apt-cache search "$1" | egrep -v '^lib'
 }
 
-sex() {
+sex() { # I swear it stands for "strip extensions"
 	for f in *; do
 		mv "$f" "${f%.*}"
 	done
