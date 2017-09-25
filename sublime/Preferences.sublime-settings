@@ -36,5 +36,6 @@
 	"move_to_limit_on_up_down": true,
 	"overlay_scroll_bars": "enabled",
 	"show_tab_close_buttons": false,
-	"tab_completion": false
+	"tab_completion": false,
+	"theme": "Adaptive.sublime-theme"
 }
