@@ -243,6 +243,7 @@ alias crx="ls -lAh | egrep '^.......r.x'"
 alias cwx="ls -lAh | egrep '^........wx'"
 alias ca="ls -lAh | egrep '^.......rwx'"
 alias nn='subl $(date +"%Y-%m-%d")'
+alias def="pls -w"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
