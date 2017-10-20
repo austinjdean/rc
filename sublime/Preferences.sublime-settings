@@ -17,7 +17,9 @@
 		"grundle",
 		"humper",
 		"screenshot",
-		"pre"
+		"pre",
+		"workflow",
+		"workflows"
 	],
 	"always_show_minimap_viewport": true,
 	"bentley_goto_definition": true,
