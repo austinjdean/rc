@@ -142,6 +142,17 @@ sex() { # I swear it stands for "strip extensions"
 	done
 }
 
+lid() {
+	sudo whoami > /dev/null 2>&1
+	returnValue=$?
+
+	if [ "$returnValue" -eq 0 ]; then
+		gnome-screensaver-command --lock
+		sleep 2
+		sudo pm-suspend
+	fi
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -193,7 +204,6 @@ alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
 alias topdf='unoconv -f pdf *.ppt* && rm *.ppt*'
 alias c='head -c -1 | xclip -selection clipboard'
 # alias round='echo $x | xargs printf "%.*f\n" $p' # thanks: http://unix.stackexchange.com/questions/167058/how-to-round-floating-point-numbers-in-shell
-alias lid='sudo -v;gnome-screensaver-command --lock;sleep 2;sudo pm-suspend'
 alias less='less -R'
 alias lg='xfce4-session-logout --logout'
 alias anhero='kill -9 $$'
