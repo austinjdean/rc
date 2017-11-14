@@ -133,7 +133,7 @@ arc() {
 }
 
 search() {
-	apt-cache search "$1" | egrep -v '^lib'
+	apt-cache search "$1" | egrep -v '^lib' | sort -h
 }
 
 sex() { # I swear it stands for "strip extensions"
@@ -2878,40 +2878,40 @@ Enjoy your grml system with the zsh!$reset_color"
 }
 
 # debian stuff
-if [[ -r /etc/debian_version ]] ; then
-	#a3# Execute \kbd{apt-cache search}
-	alias acs='apt-cache search'
-	#a3# Execute \kbd{apt-cache show}
-	alias acsh='apt-cache show'
-	#a3# Execute \kbd{apt-cache policy}
-	alias acp='apt-cache policy'
-	#a3# Execute \kbd{apt-get dist-upgrade}
-	salias adg="apt-get dist-upgrade"
-	#a3# Execute \kbd{apt-get install}
-	salias agi="apt-get install"
-	#a3# Execute \kbd{aptitude install}
-	salias ati="aptitude install"
-	#a3# Execute \kbd{apt-get upgrade}
-	salias ag="apt-get upgrade"
-	#a3# Execute \kbd{apt-get update}
-	# salias au="apt-get update"
-	#a3# Execute \kbd{aptitude update ; aptitude safe-upgrade}
-	salias -a up="aptitude update ; aptitude safe-upgrade"
-	#a3# Execute \kbd{dpkg-buildpackage}
-	alias dbp='dpkg-buildpackage'
-	#a3# Execute \kbd{grep-excuses}
-	alias ge='grep-excuses'
+# if [[ -r /etc/debian_version ]] ; then
+# 	#a3# Execute \kbd{apt-cache search}
+# 	alias acs='apt-cache search'
+# 	#a3# Execute \kbd{apt-cache show}
+# 	alias acsh='apt-cache show'
+# 	#a3# Execute \kbd{apt-cache policy}
+# 	alias acp='apt-cache policy'
+# 	#a3# Execute \kbd{apt-get dist-upgrade}
+# 	salias adg="apt-get dist-upgrade"
+# 	#a3# Execute \kbd{apt-get install}
+# 	salias agi="apt-get install"
+# 	#a3# Execute \kbd{aptitude install}
+# 	salias ati="aptitude install"
+# 	#a3# Execute \kbd{apt-get upgrade}
+# 	salias ag="apt-get upgrade"
+# 	#a3# Execute \kbd{apt-get update}
+# 	# salias au="apt-get update"
+# 	#a3# Execute \kbd{aptitude update ; aptitude safe-upgrade}
+# 	salias -a up="aptitude update ; aptitude safe-upgrade"
+# 	#a3# Execute \kbd{dpkg-buildpackage}
+# 	alias dbp='dpkg-buildpackage'
+# 	#a3# Execute \kbd{grep-excuses}
+# 	alias ge='grep-excuses'
 
-	# get a root shell as normal user in live-cd mode:
-	if isgrmlcd && [[ $UID -ne 0 ]] ; then
-	   alias su="sudo su"
-	 fi
+# 	# get a root shell as normal user in live-cd mode:
+# 	if isgrmlcd && [[ $UID -ne 0 ]] ; then
+# 	   alias su="sudo su"
+# 	 fi
 
-	#a1# Take a look at the syslog: \kbd{\$PAGER /var/log/syslog}
-	salias llog="$PAGER /var/log/syslog"	 # take a look at the syslog
-	#a1# Take a look at the syslog: \kbd{tail -f /var/log/syslog}
-	salias tlog="tail -f /var/log/syslog"	# follow the syslog
-fi
+# 	#a1# Take a look at the syslog: \kbd{\$PAGER /var/log/syslog}
+# 	salias llog="$PAGER /var/log/syslog"	 # take a look at the syslog
+# 	#a1# Take a look at the syslog: \kbd{tail -f /var/log/syslog}
+# 	salias tlog="tail -f /var/log/syslog"	# follow the syslog
+# fi
 
 # sort installed Debian-packages by size
 if check_com -c dpkg-query ; then
