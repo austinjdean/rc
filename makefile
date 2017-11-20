@@ -4,11 +4,11 @@ install:
 	ln -s $(PWD)/vimrc $(HOME)/.vimrc
 
 	# put symlinks to scripts in /usr/local/bin
-	sudo ln -s $(PWD)/update.sh /usr/local/bin/ru
-	sudo ln -s $(PWD)/status.sh /usr/local/bin/rs
-	sudo ln -s $(PWD)/gen.sh /usr/local/bin/gen
-	sudo ln -s $(PWD)/lns.sh /usr/local/bin/lns
-	sudo ln -s $(PWD)/defaults.sh /usr/local/bin/defaults
+	sudo ln -s $(PWD)/scripts/update.sh /usr/local/bin/ru
+	sudo ln -s $(PWD)/scripts/status.sh /usr/local/bin/rs
+	sudo ln -s $(PWD)/scripts/gen.sh /usr/local/bin/gen
+	sudo ln -s $(PWD)/scripts/lns.sh /usr/local/bin/lns
+	sudo ln -s $(PWD)/scripts/defaults.sh /usr/local/bin/defaults
 
 	# guake config
 	mkdir -p $(HOME)/.gconf/apps
@@ -44,11 +44,11 @@ limited:
 	mkdir -p $(HOME)/bin
 
 	# put symlinks to scripts in ~/bin
-	ln -s $(PWD)/update.sh $(HOME)/bin/ru
-	ln -s $(PWD)/status.sh $(HOME)/bin/rs
-	ln -s $(PWD)/gen.sh $(HOME)/bin/gen
-	ln -s $(PWD)/lns.sh $(HOME)/bin/lns
-	ln -s $(PWD)/defaults.sh $(HOME)/bin/defaults
+	ln -s $(PWD)/scripts/update.sh $(HOME)/bin/ru
+	ln -s $(PWD)/scripts/status.sh $(HOME)/bin/rs
+	ln -s $(PWD)/scripts/gen.sh $(HOME)/bin/gen
+	ln -s $(PWD)/scripts/lns.sh $(HOME)/bin/lns
+	ln -s $(PWD)/scripts/defaults.sh $(HOME)/bin/defaults
 
 	# tilda config
 	mkdir -p $(HOME)/.config/tilda
