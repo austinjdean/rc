@@ -29,8 +29,6 @@ clean:
 	sudo rm -f /usr/local/bin/lns
 	sudo rm -f /usr/local/bin/defaults
 
-	# rm -f $(HOME)/.config/tilda/config_0
-
 	rm -rf $(HOME)/.gconf/apps/guake
 
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
@@ -50,9 +48,9 @@ limited:
 	ln -s $(PWD)/scripts/lns.sh $(HOME)/bin/lns
 	ln -s $(PWD)/scripts/defaults.sh $(HOME)/bin/defaults
 
-	# tilda config
-	mkdir -p $(HOME)/.config/tilda
-	cp $(PWD)/config_0 $(HOME)/.config/tilda/
+	# guake config
+	mkdir -p $(HOME)/.gconf/apps
+	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
 	# sublime (FYI nukes your settings)
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
@@ -65,6 +63,6 @@ cleanLimited:
 
 	rm -rf $(HOME)/bin
 
-	rm -f $(HOME)/.config/tilda/config_0
+	rm -rf $(HOME)/.gconf/apps/guake
 
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
