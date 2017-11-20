@@ -13,7 +13,7 @@ for dir in ${defaultDirectories[@]}; do
 	if [[ $? == 0 ]]; then
 		exitStatus=0
 	fi
-	rmdir $dir 2> /dev/null
+	rmdir $HOME/$dir 2> /dev/null
 	if [[ $? == 0 ]]; then
 		exitStatus=0
 	fi
