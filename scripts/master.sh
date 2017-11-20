@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt-update
-sudo apt install zsh
+sudo apt-update -y
+sudo apt install zsh -y
 chsh -s $(which zsh)
 cd ..
 make install
