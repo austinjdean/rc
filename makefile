@@ -10,14 +10,18 @@ install:
 	sudo ln -s $(PWD)/lns.sh /usr/local/bin/lns
 	sudo ln -s $(PWD)/defaults.sh /usr/local/bin/defaults
 
-	# tilda config
-	mkdir -p $(HOME)/.config/tilda
-	cp $(PWD)/config_0 $(HOME)/.config/tilda/
+	# guake config
+	mkdir -p $(HOME)/.gconf/apps
+	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
 	# sublime (FYI nukes your settings)
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
+
+	# relocate default directories to ~/defaults
+	defaults.sh
+	cp modified-user-dirs.dirs $(HOME)/.config/user-dirs.dirs
 
 clean:
 	rm -f $(HOME)/.zshrc
@@ -29,7 +33,9 @@ clean:
 	sudo rm -f /usr/local/bin/lns
 	sudo rm -f /usr/local/bin/defaults
 
-	rm -f $(HOME)/.config/tilda/config_0
+	# rm -f $(HOME)/.config/tilda/config_0
+
+	rm -rf $(HOME)/.gconf/apps/guake
 
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 

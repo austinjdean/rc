@@ -19,4 +19,6 @@ for dir in ${defaultDirectories[@]}; do
 	fi
 done
 
+cp modified-user-dirs.dirs $HOME/.config/user-dirs.dirs
+
 exit $exitStatus
