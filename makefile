@@ -19,9 +19,6 @@ install:
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
-	# relocate default directories to ~/defaults
-	./defaults.sh
-
 clean:
 	rm -f $(HOME)/.zshrc
 	rm -f $(HOME)/.vimrc
