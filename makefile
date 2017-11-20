@@ -20,8 +20,7 @@ install:
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
 	# relocate default directories to ~/defaults
-	defaults.sh
-	cp modified-user-dirs.dirs $(HOME)/.config/user-dirs.dirs
+	./defaults.sh
 
 clean:
 	rm -f $(HOME)/.zshrc
