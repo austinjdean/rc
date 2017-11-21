@@ -14,23 +14,44 @@ install:
 	mkdir -p $(HOME)/.gconf/apps
 	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
-	# sublime (FYI nukes your settings)
+	# sublime config
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
-	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
 clean:
+	# remove zshrc and vimrc symlinks
 	rm -f $(HOME)/.zshrc
 	rm -f $(HOME)/.vimrc
 
+	# remove symlinks to scripts in /usr/local/bin
 	sudo rm -f /usr/local/bin/ru
 	sudo rm -f /usr/local/bin/rs
 	sudo rm -f /usr/local/bin/gen
 	sudo rm -f /usr/local/bin/lns
 	sudo rm -f /usr/local/bin/defaults
 
+	# remove symlink to guake config
+	rm -f $(HOME)/.gconf/apps/guake
+
+	# remove symlink to sublime config
+	rm -f $(HOME)/.config/sublime-text-3/Packages/User
+
+nuke:
+	# remove zshrc and vimrc symlinks
+	rm -rf $(HOME)/.zshrc
+	rm -rf $(HOME)/.vimrc
+
+	# remove symlinks to scripts in /usr/local/bin
+	sudo rm -rf /usr/local/bin/ru
+	sudo rm -rf /usr/local/bin/rs
+	sudo rm -rf /usr/local/bin/gen
+	sudo rm -rf /usr/local/bin/lns
+	sudo rm -rf /usr/local/bin/defaults
+
+	# remove symlink to guake config
 	rm -rf $(HOME)/.gconf/apps/guake
 
+	# remove symlink to sublime config
 	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 
 limited:
@@ -52,17 +73,20 @@ limited:
 	mkdir -p $(HOME)/.gconf/apps
 	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
-	# sublime (FYI nukes your settings)
+	# sublime config
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
-	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
 cleanLimited:
+	# remove zshrc and vimrc symlinks
 	rm -f $(HOME)/.zshrc
 	rm -f $(HOME)/.vimrc
 
-	rm -rf $(HOME)/bin
+	# remove symlinks to scripts in ~/bin
+	rm -f $(HOME)/bin
 
-	rm -rf $(HOME)/.gconf/apps/guake
+	# remove symlink to guake config
+	rm -f $(HOME)/.gconf/apps/guake
 
-	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+	# remove symlink to sublime config
+	rm -f $(HOME)/.config/sublime-text-3/Packages/User

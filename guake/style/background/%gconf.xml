@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="color" mtime="1511221635" type="string">
+		<stringvalue>#272728282222</stringvalue>
+	</entry>
+	<entry name="transparency" mtime="1511221969" type="int" value="13"/>
+</gconf>
