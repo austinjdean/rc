@@ -255,6 +255,7 @@ alias ca="ls -lAh | egrep '^.......rwx'"
 alias nn='subl $(date +"%Y-%m-%d")'
 alias def="pls -w"
 alias fe="for item in *; do"
+alias untar="tar -xvzf"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
