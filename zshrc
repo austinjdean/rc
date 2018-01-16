@@ -1,13 +1,3 @@
-# Austin's Preferences:
-
-# Commands to run
-
-xset r rate 220 40 > /dev/null 2>&1
-# thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
-# also FYI, terminal color: #060041
-
-# Functions
-
 calc() {
 	calc="${@//p/+}"
 	calc="${calc//x/*}"
@@ -255,6 +245,7 @@ alias ca="ls -lAh | egrep '^.......rwx'"
 alias nn='subl $(date +"%Y-%m-%d")'
 alias def="pls -w"
 alias fe="for item in *; do"
+alias uuid="date | md5sum | cut -c -32"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
