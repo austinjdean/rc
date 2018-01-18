@@ -1,13 +1,3 @@
-# Austin's Preferences:
-
-# Commands to run
-
-xset r rate 220 40 > /dev/null 2>&1
-# thanks: http://unix.stackexchange.com/questions/119648/redirecting-to-dev-null
-# also FYI, terminal color: #060041
-
-# Functions
-
 calc() {
 	calc="${@//p/+}"
 	calc="${calc//x/*}"
@@ -252,9 +242,10 @@ alias crw="ls -lAh | egrep '^.......rw.'"
 alias crx="ls -lAh | egrep '^.......r.x'"
 alias cwx="ls -lAh | egrep '^........wx'"
 alias ca="ls -lAh | egrep '^.......rwx'"
-alias nn='subl $(date +"%Y-%m-%d")'
+alias nn='subl $(date +"%Y-%m-%d")-$(dirname $(pwd) | cut -d"/" -f6)'
 alias def="pls -w"
 alias fe="for item in *; do"
+alias uuid="date | md5sum | cut -c -32"
 alias untar="tar -xvzf"
 
 # rsync aliases
