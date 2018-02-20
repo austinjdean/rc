@@ -248,6 +248,7 @@ alias fe="for item in *; do"
 alias uuid="date | md5sum | cut -c -32"
 alias untar="tar -xvzf"
 alias myip="curl -s api.ipify.org | cut -c 1-"
+alias rb="git remote show origin"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
