@@ -143,6 +143,15 @@ lid() {
 	fi
 }
 
+shh() {
+	# Be sure to close terminal after issuing naughty commands.
+	# If $HISTFILE is set again before you close your session,
+	# commands run after unsetting it will be recorded.
+	# thanks: https://stackoverflow.com/a/4881990/2929868
+	sed -i '$ d' $HISTFILE # delete last line of $HISTFILE
+	unset HISTFILE
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -233,7 +242,6 @@ alias deb="sudo dpkg -i"
 alias nuke="shred -uz"
 alias quad="quadrapassel"
 alias scrub="truncate -s 0"
-alias shh="unset HISTFILE"
 alias sl="sl -e"
 alias cr="ls -lAh | egrep '^.......r..'"
 alias cw="ls -lAh | egrep '^........w.'"
