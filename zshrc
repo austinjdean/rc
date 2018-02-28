@@ -264,7 +264,7 @@ alias def="pls -w"
 alias fe="for item in *; do"
 alias uuid="date | md5sum | cut -c -32"
 alias untar="tar -xvzf"
-alias myip="curl -s api.ipify.org | cut -c 1-"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
 
 # rsync aliases
