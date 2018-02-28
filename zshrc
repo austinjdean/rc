@@ -152,6 +152,15 @@ shh() {
 	unset HISTFILE
 }
 
+fr() { # force reset
+	if [ $# -ne 0 ]; then
+		git fetch --all && git reset --hard origin/"$1"
+	else
+		echo Supply branch as argument.
+		false
+	fi
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
