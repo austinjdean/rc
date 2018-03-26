@@ -146,6 +146,24 @@ lid() {
 	fi
 }
 
+shh() {
+	# Be sure to close terminal after issuing naughty commands.
+	# If $HISTFILE is set again before you close your session,
+	# commands run after unsetting it will be recorded.
+	# thanks: https://stackoverflow.com/a/4881990/2929868
+	sed -i '$ d' $HISTFILE # delete last line of $HISTFILE
+	unset HISTFILE
+}
+
+fr() { # force reset
+	if [ $# -ne 0 ]; then
+		git fetch --all && git reset --hard origin/"$1"
+	else
+		echo Supply branch as argument.
+		false
+	fi
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -236,7 +254,6 @@ alias deb="sudo dpkg -i"
 alias nuke="shred -uz"
 alias quad="quadrapassel"
 alias scrub="truncate -s 0"
-alias shh="unset HISTFILE"
 alias sl="sl -e"
 alias cr="ls -lAh | egrep '^.......r..'"
 alias cw="ls -lAh | egrep '^........w.'"
@@ -250,7 +267,8 @@ alias def="pls -w"
 alias fe="for item in *; do"
 alias uuid="date | md5sum | cut -c -32"
 alias untar="tar -xvzf"
-alias myip="curl -s api.ipify.org | cut -c 1-"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias rb="git remote show origin"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
