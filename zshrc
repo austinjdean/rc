@@ -9,7 +9,7 @@ rand() {
 	# echo "$(((RANDOM % $1) + 1))"
 	# returns random number in range [1,arg]
 	# remove the +1 if you want [0,arg-1]
-	echo $((16#$(uuid | cut -c -8)%$1+1))
+	echo $((16#$(date | sha256sum | cut -c -8)%$1+1))
 }
 
 backup() {
