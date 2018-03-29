@@ -9,7 +9,7 @@ rand() {
 	# echo "$(((RANDOM % $1) + 1))"
 	# returns random number in range [1,arg]
 	# remove the +1 if you want [0,arg-1]
-	echo $((16#$(date | sha256sum | cut -c -8)%$1+1))
+	echo $((16#$(date +%s%3N | sha256sum | cut -c -8)%$1+1))
 }
 
 backup() {
@@ -265,7 +265,7 @@ alias ca="ls -lAh | egrep '^.......rwx'"
 alias nn='subl $(date +"%Y-%m-%d")-$(dirname $(pwd) | cut -d"/" -f6)'
 alias def="pls -w"
 alias fe="for item in *; do"
-alias uuid="date | md5sum | cut -c -32"
+alias uuid="date +%s%3N | md5sum | cut -c -32"
 alias untar="tar -xvzf"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
