@@ -202,7 +202,7 @@ alias night='ssh Austin@192.168.1.128'
 alias o='xdg-open'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage|time" | cat'
 alias fp='readlink -f'
-alias t='tree -LC '
+alias t='tree -a'
 alias mkdt='mkdir $(date "+%m-%d-%y_%H.%M")'
 alias n.='nautilus --no-desktop . > /dev/null 2>&1 & '
 alias height='tput lines'
@@ -269,6 +269,7 @@ alias uuid="date +%s%3N | md5sum | cut -c -32"
 alias untar="tar -xvzf"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
+alias h="curl -I"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
