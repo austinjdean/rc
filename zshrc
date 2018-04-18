@@ -316,7 +316,7 @@ export PATH=${PATH}:$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:
 # export ANDROID_HOME=/usr/local/android-sdk-linux
 # export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
-export JAVA_HOME=/usr/lib/jdk1.7.0.80/jdk
+# export JAVA_HOME=/usr/lib/jdk1.7.0.80/jdk
 #export PATH=${PATH}:$JAVA_HOME/bin
 
 # export PHONEGAP_HOME=/home/adean/node_modules/phonegap
