@@ -164,6 +164,14 @@ fr() { # force reset
 	fi
 }
 
+f() { # casual, lowercase
+	find . -iname "*$1*" # case insensitive, wildcards
+}
+
+F() { # strict, uppercase
+	find . -name "$1" # case sensitive, no wildcards
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -238,7 +246,6 @@ alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
 alias here="mv ~/incoming/* ."
 alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
-alias rf="find . -name" # recursive find
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
 alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | egrep"
