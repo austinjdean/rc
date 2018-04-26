@@ -172,6 +172,15 @@ F() { # strict, uppercase
 	find . -name "$1" # case sensitive, no wildcards
 }
 
+which() { # gotta bend over backwards to get a good answer around here
+	declare -f "$1" > /dev/null 2>&1
+	# 0 = function, anything else = not a function
+	if [ $? -eq 0 ]; then
+		declare -f "$1" # show function body
+	fi
+	type -a "$1"
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
@@ -215,7 +224,6 @@ alias mkdt='mkdir $(date "+%m-%d-%y_%H.%M")'
 alias n.='nautilus --no-desktop . > /dev/null 2>&1 & '
 alias height='tput lines'
 alias width='tput cols'
-alias lu='ps aux | egrep "sshd: .+?@" | head -n -1'
 alias fuck='sudo $(fc -ln -1)' # thanks: http://unix.stackexchange.com/a/158480/110877
 # alias rmd='cd ~/Downloads && rm -rf $(ls -Art | tail -n 1) && cd - > /dev/null 2>&1' # thanks: http://stackoverflow.com/a/1015684/2929868
 alias howmanypls='grep ": [0-9]\{10\}:[0-9];pls" $HISTFILE | wc -l'
