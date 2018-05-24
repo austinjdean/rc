@@ -257,6 +257,7 @@ alias asis="git add -A && git commit -m 'Commit from asis alias' && git push ori
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
 alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | grep -ie"
+alias SP="ps -ef | grep -e"
 alias wips="sudo arp-scan --interface=wlan0 --localnet"
 alias eips="sudo arp-scan --interface=eth0 --localnet"
 alias ips="sudo arp-scan -l"
@@ -287,6 +288,7 @@ alias rb="git remote show origin"
 alias h="curl -I"
 alias d='date "+%Y-%m-%d | %H:%M"'
 alias s="ls -F --color=auto"
+
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
