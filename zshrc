@@ -285,7 +285,7 @@ alias untar="tar -xvzf"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
 alias h="curl -I"
-alias d='date "+%Y-%m-%d | %H:%M"'
+alias d='date "+%Y-%m-%d %H:%M"'
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
