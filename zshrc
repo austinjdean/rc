@@ -165,11 +165,11 @@ fr() { # force reset
 }
 
 f() { # casual, lowercase
-	find . -iname "*$1*" # case insensitive, wildcards
+	find -L . -iname "*$1*" 2>/dev/null # case insensitive, wildcards
 }
 
 F() { # strict, uppercase
-	find . -name "$1" # case sensitive, no wildcards
+	find -L . -name "$1" 2>/dev/null # case sensitive, no wildcards
 }
 
 which() { # gotta bend over backwards to get a good answer around here
