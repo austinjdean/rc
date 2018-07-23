@@ -288,7 +288,7 @@ alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
 alias h="curl -I"
 alias d='date "+%Y-%m-%d %H:%M"'
-alias echoecho=echo meow
+alias ee="echo meow"
 alias s="ls -F --color=auto"
 alias lfp="tcpdump -nni eth0 icmp"
 
