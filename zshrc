@@ -165,11 +165,11 @@ fr() { # force reset
 }
 
 f() { # casual, lowercase
-	find -L . -iname "*$1*" 2>/dev/null # case insensitive, wildcards
+	find . -iname "*$1*" # case insensitive, wildcards
 }
 
 F() { # strict, uppercase
-	find -L . -name "$1" 2>/dev/null # case sensitive, no wildcards
+	find . -name "$1" # case sensitive, no wildcards
 }
 
 which() { # gotta bend over backwards to get a good answer around here
@@ -254,7 +254,7 @@ alias dist='sudo apt-get dist-upgrade -y'
 alias cwd="pwd | tr -d '\n' | xclip -selection clipboard"
 alias inc="mkdir -p ~/incoming && mv /mnt/s/to-lxss/* ~/incoming"
 alias here="mv ~/incoming/* ."
-alias asis="git add -A && git commit -m 'Commit from asis alias' && git push origin master"
+alias asis="git add -A && git commit -m '.' && git push origin master"
 alias ud="cd ~/git/drexel && git pull && cd - > /dev/null 2>&1"
 alias wpm="cd /mnt/s/wallpapers/meta"
 alias sp="ps -ef | grep -ie"
@@ -287,10 +287,11 @@ alias untar="tar -xvzf"
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias rb="git remote show origin"
 alias h="curl -I"
-alias d='date "+%Y-%m-%d %H:%M"'
+alias d='date "+%Y-%m-%d_%H-%M"'
 alias ee="echo meow"
 alias s="ls -F --color=auto"
 alias lfp="tcpdump -nni eth0 icmp"
+alias burpip="curl -ks https://www.google.com/search?q=my+ip --proxy 127.0.0.1:8080 | grep -o '(Client IP address: [0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\})' | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | cat"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
