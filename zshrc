@@ -289,6 +289,7 @@ alias rb="git remote show origin"
 alias h="curl -I"
 alias d='date "+%Y-%m-%d | %H:%M"'
 alias s="ls -F --color=auto"
+alias os="lsb_release -a"
 
 
 # rsync aliases
