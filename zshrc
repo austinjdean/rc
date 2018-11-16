@@ -293,6 +293,7 @@ alias s="ls -F --color=auto"
 alias os="lsb_release -a"
 alias lfp="tcpdump -nni eth0 icmp"
 alias burpip="curl -ks https://www.google.com/search?q=my+ip --proxy 127.0.0.1:8080 | grep -o '(Client IP address: [0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\})' | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | cat"
+alias kc="ssh-keygen -y"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
