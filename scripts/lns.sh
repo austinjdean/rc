@@ -20,8 +20,9 @@ if [[ -d $2 ]]; then # directory exists
 	sudo ln -sf $(readlink -f $1) $(readlink -f $2)/$pants
 elif [[ -a $2 ]]; then # file exists
 	# fail - don't overwrite file
-	echo Target file exists - exiting to prevent overwrite.
-	exit 0
+	echo "Target file exists - are you sure you want to overwrite?"
+	rm -i $2
+	sudo ln -s $(readlink -f $1) $(readlink -f $2)
 else # file doesn't exist
 	# create symlink with given path/name since it's safe
 	sudo ln -sf $(readlink -f $1) $(readlink -f $2)
