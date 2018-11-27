@@ -19,7 +19,7 @@ if [[ -d $2 ]]; then # directory exists
 	# thanks: http://stackoverflow.com/questions/3162385/how-to-split-a-string-in-shell-and-get-the-last-field
 	sudo ln -sf $(readlink -f $1) $(readlink -f $2)/$pants
 elif [[ -a $2 ]]; then # file exists
-	# fail - don't overwrite file
+	# warn before overwriting existing file
 	echo "Target file exists - are you sure you want to overwrite?"
 	rm -i $2
 	sudo ln -s $(readlink -f $1) $(readlink -f $2)
