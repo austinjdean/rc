@@ -181,6 +181,28 @@ which() { # gotta bend over backwards to get a good answer around here
 	type -a "$1"
 }
 
+rp() {
+	if [[ $# -eq 0 ]]; then
+		echo 'Usage: rp [-i] file'
+		return 1
+	fi
+
+	localIps=$(hostname -I)
+	ip="${localIps%% *}" # wtf https://stackoverflow.com/a/4170409
+
+	for var in "$@"; do # sloppily consume args
+		if [ "$var" = "-i" ]; then # -i for internet, i.e. public IP
+			ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+		else
+			fp=$(readlink -f "$var")
+		fi
+	done
+
+	user=$(whoami)
+
+	echo "$user"@"$ip":"$fp"
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
