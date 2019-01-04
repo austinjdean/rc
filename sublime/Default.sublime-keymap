@@ -31,6 +31,6 @@
         [
             { "key": "setting.is_widget", "operator": "equal", "operand": true }
         ]
-    }
+    },
+    { "keys": ["ctrl+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/select_line_correctly.sublime-macro"} }
 ]
-

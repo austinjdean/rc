@@ -1,0 +1,4 @@
+[
+	{"command": "move_to", "args": {"to": "hardbol"}},
+	{"command": "move_to", "args": {"to": "eol", "extend": true}},
+]
