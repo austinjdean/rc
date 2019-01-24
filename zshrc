@@ -114,11 +114,12 @@ rdups() {
 }
 
 rn() {
-	sudo service network-manager restart > /dev/null 2>&1
-	sudo restart network-manager > /dev/null 2>&1
-	sudo service networking restart > /dev/null 2>&1
-	sudo restart networking > /dev/null 2>&1
-	true
+	systemctl restart networking
+	# sudo service network-manager restart > /dev/null 2>&1
+	# sudo restart network-manager > /dev/null 2>&1
+	# sudo service networking restart > /dev/null 2>&1
+	# sudo restart networking > /dev/null 2>&1
+	# true
 }
 
 arc() {
