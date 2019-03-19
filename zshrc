@@ -314,7 +314,7 @@ alias rb="git remote show origin"
 alias h="curl -I"
 alias d='date "+%Y-%m-%d_%H-%M"'
 alias ee="echo meow"
-alias s="ls -F --color=auto"
+alias s="clear && ls -F --color=auto"
 alias os="lsb_release -a"
 alias lfp="tcpdump -nni eth0 icmp"
 alias burpip="curl -ks https://www.google.com/search?q=my+ip --proxy 127.0.0.1:8080 | grep -o '(Client IP address: [0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\})' | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | cat"
