@@ -321,6 +321,7 @@ alias burpip="curl -ks https://www.google.com/search?q=my+ip --proxy 127.0.0.1:8
 alias sse="date +%s"
 alias ck="ssh-keygen -y"
 alias lsshc="ps auxwww | grep -v 'grep' | grep sshd:"
+alias dn="nmap -Pn -sS"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"
