@@ -11,17 +11,17 @@ install:
 	sudo ln -s $(PWD)/scripts/defaults.sh /usr/local/bin/defaults
 
 	# guake config
-	mkdir -p $(HOME)/.gconf/apps
-	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
+	# mkdir -p $(HOME)/.gconf/apps
+	# ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
 	# sublime config
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages
-	ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
+	sudo ln -s $(PWD)/sublime $(HOME)/.config/sublime-text-3/Packages/User
 
 clean:
 	# remove zshrc and vimrc symlinks
-	rm -f $(HOME)/.zshrc
-	rm -f $(HOME)/.vimrc
+	sudo rm -f $(HOME)/.zshrc
+	sudo rm -f $(HOME)/.vimrc
 
 	# remove symlinks to scripts in /usr/local/bin
 	sudo rm -f /usr/local/bin/ru
@@ -31,15 +31,15 @@ clean:
 	sudo rm -f /usr/local/bin/defaults
 
 	# remove symlink to guake config
-	rm -f $(HOME)/.gconf/apps/guake
+	sudo rm -f $(HOME)/.gconf/apps/guake
 
 	# remove symlink to sublime config
-	rm -f $(HOME)/.config/sublime-text-3/Packages/User
+	sudo rm -f $(HOME)/.config/sublime-text-3/Packages/User
 
 nuke:
 	# remove zshrc and vimrc symlinks
-	rm -rf $(HOME)/.zshrc
-	rm -rf $(HOME)/.vimrc
+	sudo rm -rf $(HOME)/.zshrc
+	sudo rm -rf $(HOME)/.vimrc
 
 	# remove symlinks to scripts in /usr/local/bin
 	sudo rm -rf /usr/local/bin/ru
@@ -49,10 +49,10 @@ nuke:
 	sudo rm -rf /usr/local/bin/defaults
 
 	# remove symlink to guake config
-	rm -rf $(HOME)/.gconf/apps/guake
+	sudo rm -rf $(HOME)/.gconf/apps/guake
 
 	# remove symlink to sublime config
-	rm -rf $(HOME)/.config/sublime-text-3/Packages/User
+	sudo rm -rf $(HOME)/.config/sublime-text-3/Packages/User
 
 limited:
 	# put zshrc and vimrc in ~
@@ -70,8 +70,8 @@ limited:
 	ln -s $(PWD)/scripts/defaults.sh $(HOME)/bin/defaults
 
 	# guake config
-	mkdir -p $(HOME)/.gconf/apps
-	ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
+	# mkdir -p $(HOME)/.gconf/apps
+	# ln -s $(PWD)/guake $(HOME)/.gconf/apps/guake
 
 	# sublime config
 	mkdir -p $(HOME)/.config/sublime-text-3/Packages

@@ -266,12 +266,12 @@ alias gp='git pull'
 alias gl='git diff HEAD^ HEAD'
 alias fs='git fetch && git status'
 alias discard="git checkout ." # -p for safety but I ain't no bitch
-alias ue='sudo apt update -y && sudo apt upgrade -y && sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y' # UPDATE EVERYTHING
+alias ue='sudo apt update -y && sudo apt upgrade -y && sudo apt update -y && sudo apt-get dist-upgrade -y && sudo apt autoremove -y' # UPDATE EVERYTHING
 alias gimme='sudo apt install -y'
 alias ar='sudo apt autoremove -y'
 alias purge='sudo apt purge -y'
+alias dist='sudo apt-get dist-upgrade -y'
 # alias udug='sudo apt-get update -y && sudo apt-get upgrade -y'
-# alias dist='sudo apt-get dist-upgrade -y'
 alias rly='cd $(pwd -P)'
 alias rd='rmdir'
 alias md='mkdir -p'
@@ -321,6 +321,7 @@ alias burpip="curl -ks https://www.google.com/search?q=my+ip --proxy 127.0.0.1:8
 alias sse="date +%s"
 alias ck="ssh-keygen -y"
 alias lsshc="ps auxwww | grep -v 'grep' | grep sshd:"
+alias dn="nmap -Pn -sS"
 
 # rsync aliases
 alias flac2clam="rsync -rhuv --exclude=.git --delete /mnt/s/Music/flac/ adean@192.168.1.16:/home/adean/defaults/Music/flac/"

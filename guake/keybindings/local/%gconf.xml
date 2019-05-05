@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<gconf>
-	<entry name="previous_tab" mtime="1511221539" type="string">
-		<stringvalue>&lt;Primary&gt;asciitilde</stringvalue>
-	</entry>
-	<entry name="next_tab" mtime="1511221537" type="string">
-		<stringvalue>&lt;Primary&gt;grave</stringvalue>
-	</entry>
-</gconf>
