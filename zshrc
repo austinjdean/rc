@@ -204,6 +204,34 @@ rp() {
 	echo "$user"@"$ip":"$fp"
 }
 
+si() { # sqlmap info
+	if [[ $# -eq 0 ]]; then
+		echo 'Usage: si [-s] [-f] request.txt'
+		echo '  -s : force SSL'
+		echo '  -f : flush session'
+		return 1
+	fi
+	sslFlag=""
+	flushFlag=""
+
+	for var in "$@"; do # sloppily consume args
+		if [ "$var" = "-s" ]; then # -s to use SSL
+			sslFlag="--force-ssl"
+		elif [ "$var" = "-f" ]; then # -f to flush session
+			flushFlag="--flush-session"
+		elif [ "$var" = "-sf" ]; then # -f to flush session
+			flushFlag="--flush-session"
+			sslFlag="--force-ssl"
+		elif [ "$var" = "-fs" ]; then # -f to flush session
+			flushFlag="--flush-session"
+			sslFlag="--force-ssl"
+		else
+			fp=$(readlink -f "$var")
+		fi
+	done
+	echo sqlmap -r "$fp" --random-agent --current-user --hostname --is-dba --current-db "$sslFlag" "$flushFlag"
+}
+
 # wm() {
 # 	watch -n 1 $(echo "du -sh scripts/internet-status.log && wc -l scripts/internet-status.log")
 # }
